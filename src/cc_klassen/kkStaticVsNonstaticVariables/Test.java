@@ -3,9 +3,17 @@ package cc_klassen.kkStaticVsNonstaticVariables;
 public class Test {
 
 	public static void main(String[] args) {
-		for ( int ii=0 ; ii<10 ; ii++ ) {
-			Myclass mc = new Myclass() ;
-		}
+
+		Printer prn = new Printer() ;
+		prn.prettyPrint("def");
+		prn.prettyPrint("def");
+		prn.prettyPrint("def");
+		
+		Printer prn2 = new Printer() ;
+		prn2.prettyPrint("def");
+		
+		prn.prettyPrint("def");
+		
 	}
 
 }

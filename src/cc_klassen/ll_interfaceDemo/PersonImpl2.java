@@ -12,7 +12,6 @@ public class PersonImpl2 implements PersonI, MobileI {
 		return (int) age ;
 	}
 
-	@Override
 	public void move() {
 		System.exit(-1);
 	}

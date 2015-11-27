@@ -9,7 +9,7 @@ public class Test {
 //    	System.out.println( " num val of b: " + Character.getNumericValue('b') ) ;
     	
     	
-//        Character myCharacter = new Character('C');
+//        Character myCharacter = new Character('b');
 //        Character a2 = new Character('b');
 //        
 //        if ( myCharacter.equals(a2) ) {
@@ -18,17 +18,17 @@ public class Test {
 //            System.out.println ( " NOT equal " ) ;
 //        }
 
-        char bbb = 'g' ;
-        
-        Character aaa = new Character('a');
-        int difference = aaa.compareTo(bbb) ;
-        System.out.println( " difference: " + difference ) ;
-        if (difference == 0) {
-            System.out.println("a is equal to b.");
-        } else if (difference < 0) {
-            System.out.println("a is less than b.");
-        } else if (difference > 0) {
-            System.out.println("a is greater than b.");
-        }
+//        char bbb = 'g' ;
+//        
+//        Character aaa = new Character('a');
+//        int difference = aaa.compareTo(bbb) ;
+//        System.out.println( " difference: " + difference ) ;
+//        if (difference == 0) {
+//            System.out.println("a is equal to b.");
+//        } else if (difference < 0) {
+//            System.out.println("a is less than b.");
+//        } else if (difference > 0) {
+//            System.out.println("a is greater than b.");
+//        }
     }
 }

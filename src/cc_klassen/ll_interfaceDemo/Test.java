@@ -2,12 +2,13 @@ package cc_klassen.ll_interfaceDemo;
 class Test {
 	public static void main  ( String[] args ) {
 		
-		PersonI father =  new PersonImpl4();
+		PersonI father ;
 		
-		System.out.println("here10") ;
+		father = new Adult() ;
 		
-		System.out.println( " age: " + father.getAge() ) ;
+		father.getAge() ;
+
+//		father.getEmployer() ;
 		
-		System.out.println("here20") ;
 	}
 }

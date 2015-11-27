@@ -1,7 +1,7 @@
 package gg_polymorphism.bb_PolymorphWInterface;
-class Person implements AgentI {
+class PersonImpl implements AgentI, CanSpeak {
 	private int id ;
-	Person( int id ) {
+	PersonImpl( int id ) {
 		this.id = id ;
 	}
 	@Override
@@ -13,6 +13,7 @@ class Person implements AgentI {
 		System.out.println ( " Person move method on person ") ;
 	}
 	
+	@Override
 	public void speak () {
 		System.out.println ( " Person is speaking " ) ;
 	}

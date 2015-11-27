@@ -2,12 +2,14 @@ package aa_basics.ee_Control;
 class Control {
 	public static void main  ( String[] args ) {
 		
-		final int THIS_IS_A_VARIABLE ;
-		
-		
-		THIS_IS_A_VARIABLE = 20 ;
-		
-		
+		for ( int ii=0 ; ; ii++ ) {
+			System.out.println( "ii=" + ii );
+			if ( ii==31 ) {
+				System.out.println("I am here");
+				break ;
+			}
+		}
+//		System.out.println("here2");
 		
 //		int ii = 15 ;
 //		if ( ii < 10 ) {

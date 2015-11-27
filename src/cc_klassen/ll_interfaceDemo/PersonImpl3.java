@@ -1,13 +1,11 @@
 package cc_klassen.ll_interfaceDemo;
 
 public class PersonImpl3 implements PersonI {
-	private double age;
 
-	void Person( double var ) {
-		this.age = var ;
-	}
-	
+	private int age;
+
 	public int getAge() {
-		return -1  ;
-	} 
+		System.out.println( "calling getAge of impl3");
+		return age ;
+	}
 }

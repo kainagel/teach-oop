@@ -1,11 +1,12 @@
 package cc_klassen.ll_interfaceDemo;
 
 public class PersonImpl4 implements PersonI {
-
-	@Override
+	private double age ;
+	
 	public int getAge() {
-		// TODO Auto-generated method stub
-		return 0;
+		System.out.println( "calling getAge of impl4");
+
+		return (int) age ;
 	}
 
 }
