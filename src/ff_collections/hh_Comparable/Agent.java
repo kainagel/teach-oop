@@ -12,9 +12,9 @@ public class Agent implements Comparable<Agent>
 
 	@Override
 	public int compareTo ( Agent otherAgent ) {
-		if ( this.getAge() < otherAgent.getAge() ) {
+		if ( this.getId() < otherAgent.getId() ) {
 			return -1; 
-		} else if ( this.getAge() == otherAgent.getAge() ) {
+		} else if ( this.getId() == otherAgent.getId() ) {
 			return 0 ;
 		} else {
 			return 1 ; 
