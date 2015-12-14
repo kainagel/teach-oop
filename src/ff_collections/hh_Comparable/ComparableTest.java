@@ -15,9 +15,9 @@ class ComparableTest
 		}
 		
 //		System.out.println ( "\ndemonstrate that id is in rnd sequence: " ) ;
-//		for ( Agent ag : agents ) {
-//			System.out.println ( " agentId: " + ag.getId() + " agentAge: " + ag.getAge() ) ;
-//		}
+		for ( Agent ag : agents ) {
+			System.out.println ( " agentId: " + ag.getId() + " agentAge: " + ag.getAge() ) ;
+		}
 
 //		System.out.println ( "\nsort the agents ... " ) ;
 		Collections.sort( agents ) ;
