@@ -20,19 +20,11 @@ public class Test {
 		}
 		printAllAgentIds(agents) ;
 		
-		List<Agent> copy = new LinkedList<>(agents) ;
-		
-		Random rnd = new Random(4713) ;
-		Collections.shuffle(agents,rnd) ;
+		Collections.shuffle(agents) ;
 		printAllAgentIds(agents) ;
 
-//		rnd.setSeed(4713);
-//		Collections.shuffle(agents,rnd) ;
-//		printAllAgentIds(agents) ;
-
-		rnd.setSeed(4713);
-		Collections.shuffle(copy,rnd) ;
-		printAllAgentIds(copy) ;
+		Collections.shuffle(agents) ;
+		printAllAgentIds(agents) ;
 
 	}
 }
