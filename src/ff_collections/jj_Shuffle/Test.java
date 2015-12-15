@@ -11,6 +11,7 @@ public class Test {
 		System.out.println() ;
 	}
 
+	
 	public static void main ( String[] args ) {
 		List<Agent> agents = new ArrayList<Agent>() ;
 
