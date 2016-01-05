@@ -14,17 +14,19 @@ public class Test {
 	
 	public static void main ( String[] args ) {
 		List<Agent> agents = new ArrayList<Agent>() ;
-
+		
 		for ( int ii=0 ; ii<10 ; ii++ ) {
 			Agent ag = new Agent(ii) ;
 			agents.add( ag ) ;
 		}
 		printAllAgentIds(agents) ;
 		
-		Collections.shuffle(agents) ;
+		Random rnd = new Random(4711) ;
+		
+		Collections.shuffle(agents, rnd ) ;
 		printAllAgentIds(agents) ;
 
-		Collections.shuffle(agents) ;
+		Collections.shuffle(agents, rnd ) ;
 		printAllAgentIds(agents) ;
 
 	}
