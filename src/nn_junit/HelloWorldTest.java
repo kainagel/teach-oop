@@ -19,6 +19,11 @@ public class HelloWorldTest {
 	public void testHelloWorld() {
 		Assert.assertEquals("Hello World", HelloWorld.getHello());
 	}
+	
+	@Test
+	public void testGoodbye() {
+		Assert.assertEquals("You don't say goodbye?", goodbye, HelloWorld.sayHelloGoodbye());
+	}
 
 	@Test
 	public void testGoodbyeHello(){
