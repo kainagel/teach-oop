@@ -1,0 +1,4 @@
+<map id="ff_collections.bb_ListWithPolymorphismAndCast.AgentI" name="ff_collections.bb_ListWithPolymorphismAndCast.AgentI">
+<area shape="rect" id="node2" href="$d6/d05/classff__collections_1_1bb___list_with_polymorphism_and_cast_1_1_dog.html" title="{ff_collections.bb_ListWith\lPolymorphismAndCast.Dog\n||+ getId()\l+ Dog()\l+ howl()\l}" alt="" coords="5,145,191,267"/>
+<area shape="rect" id="node3" href="$d0/d50/classff__collections_1_1bb___list_with_polymorphism_and_cast_1_1_person.html" title="{ff_collections.bb_ListWith\lPolymorphismAndCast.Person\n||+ getId()\l+ Person()\l+ talk()\l}" alt="" coords="215,145,419,267"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="hh_generics.bb_simple.Person" name="hh_generics.bb_simple.Person">
+<area shape="rect" id="node2" href="$dd/d26/classhh__generics_1_1bb__simple_1_1_adult.html" title="{hh_generics.bb_simple.Adult\n||+ setWorkplace()\l+ getWorkplace()\l+ toString()\l~ Adult()\l}" alt="" coords="5,160,199,281"/>
+<area shape="rect" id="node3" href="$dc/d40/classhh__generics_1_1bb__simple_1_1_child.html" title="{hh_generics.bb_simple.Child\n||+ setSchool()\l+ getSchool()\l+ toString()\l~ Child()\l}" alt="" coords="223,160,416,281"/>
+</map>

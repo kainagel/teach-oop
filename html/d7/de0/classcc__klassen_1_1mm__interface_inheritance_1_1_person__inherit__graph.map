@@ -1,0 +1,5 @@
+<map id="cc_klassen.mm_interfaceInheritance.Person" name="cc_klassen.mm_interfaceInheritance.Person">
+<area shape="rect" id="node2" href="$dc/d26/interfacecc__klassen_1_1mm__interface_inheritance_1_1_adult_i.html" title="{cc_klassen.mm_interfaceInheritance.\lAdultI\n||}" alt="" coords="139,160,381,252"/>
+<area shape="rect" id="node3" href="$d9/d5e/interfacecc__klassen_1_1mm__interface_inheritance_1_1_person_i.html" title="{cc_klassen.mm_interfaceInheritance.\lPersonI\n||+ setAge()\l+ getAge()\l}" alt="" coords="5,5,248,112"/>
+<area shape="rect" id="node4" href="$d0/dfa/interfacecc__klassen_1_1mm__interface_inheritance_1_1_employable.html" title="{cc_klassen.mm_interfaceInheritance.\lEmployable\n||+ setEmployer()\l+ getEmployer()\l}" alt="" coords="272,5,515,112"/>
+</map>

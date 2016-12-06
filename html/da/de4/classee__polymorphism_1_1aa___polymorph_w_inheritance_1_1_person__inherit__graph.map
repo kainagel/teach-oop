@@ -1,0 +1,4 @@
+<map id="ee_polymorphism.aa_PolymorphWInheritance.Person" name="ee_polymorphism.aa_PolymorphWInheritance.Person">
+<area shape="rect" id="node2" href="$db/d1b/classee__polymorphism_1_1aa___polymorph_w_inheritance_1_1_adult.html" title="{ee_polymorphism.aa\l_PolymorphWInheritance.Adult\n||~ setEmployer()\l~ getEmployer()\l~ getAge()\l}" alt="" coords="5,160,211,281"/>
+<area shape="rect" id="node3" href="$d9/d74/classee__polymorphism_1_1aa___polymorph_w_inheritance_1_1_child.html" title="{ee_polymorphism.aa\l_PolymorphWInheritance.Child\n||~ setSchool()\l~ getSchool()\l}" alt="" coords="235,167,440,274"/>
+</map>

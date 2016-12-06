@@ -1,0 +1,5 @@
+<map id="cc_klassen.ll_interfaceDemo.MobileI" name="cc_klassen.ll_interfaceDemo.MobileI">
+<area shape="rect" id="node2" href="$d2/d66/interfacecc__klassen_1_1ll__interface_demo_1_1_mobile_person_i.html" title="{cc_klassen.ll_interfaceDemo.\lMobilePersonI\n||}" alt="" coords="5,160,201,252"/>
+<area shape="rect" id="node4" href="$d6/d8d/classcc__klassen_1_1ll__interface_demo_1_1_person_impl2.html" title="{cc_klassen.ll_interfaceDemo.\lPersonImpl2\n||+ PersonImpl2()\l+ getAge()\l+ move()\l}" alt="" coords="225,145,421,267"/>
+<area shape="rect" id="node3" href="$d1/d1c/classcc__klassen_1_1ll__interface_demo_1_1_person_impl1.html" title="{cc_klassen.ll_interfaceDemo.\lPersonImpl1\n||+ getAge()\l+ move()\l~ PersonImpl1()\l}" alt="" coords="5,315,201,436"/>
+</map>

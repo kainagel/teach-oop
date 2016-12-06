@@ -1,0 +1,4 @@
+<map id="hi_inheritance_et_al.dd_composition.PersonI" name="hi_inheritance_et_al.dd_composition.PersonI">
+<area shape="rect" id="node2" href="$d0/d4a/classhi__inheritance__et__al_1_1dd__composition_1_1_driver_vehicle_unit.html" title="{hi_inheritance_et_al.dd\l_composition.DriverVehicleUnit\n|~ personDelegate\l~ carDelegate\l|+ move()\l+ getAge()\l~ DriverVehicleUnit()\l}" alt="" coords="5,145,212,281"/>
+<area shape="rect" id="node3" href="$d0/d20/classhi__inheritance__et__al_1_1dd__composition_1_1_person_impl.html" title="{hi_inheritance_et_al.dd\l_composition.PersonImpl\n|~ age\l|+ getAge()\l~ PersonImpl()\l}" alt="" coords="236,160,408,267"/>
+</map>

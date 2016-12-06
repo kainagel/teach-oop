@@ -1,0 +1,4 @@
+<map id="ee_polymorphism.bb_PolymorphWInterface.AgentI" name="ee_polymorphism.bb_PolymorphWInterface.AgentI">
+<area shape="rect" id="node2" href="$df/d7a/classee__polymorphism_1_1bb___polymorph_w_interface_1_1_adult.html" title="{ee_polymorphism.bb\l_PolymorphWInterface.Adult\n||+ getId()\l+ move()\l+ speak()\l~ Adult()\l}" alt="" coords="5,160,197,296"/>
+<area shape="rect" id="node3" href="$da/d01/classee__polymorphism_1_1bb___polymorph_w_interface_1_1_dog.html" title="{ee_polymorphism.bb\l_PolymorphWInterface.Dog\n||+ getId()\l+ move()\l+ bark()\l~ Dog()\l}" alt="" coords="222,160,407,296"/>
+</map>
