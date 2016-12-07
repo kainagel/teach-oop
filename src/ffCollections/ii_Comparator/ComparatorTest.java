@@ -19,7 +19,7 @@ class ComparatorTest
 		printAllAgents(agents);
 
 		System.out.println ( "\nsort the agents according to CMP ..." ) ;
-		Collections.sort( agents /* , insert anonymous class here */ ) ;
+		Collections.sort( agents /* , insert variable here */ ) ;
 
 		System.out.println ( "\nprint out the agents: " ) ;
 		printAllAgents(agents) ;
