@@ -6,7 +6,7 @@ import java.util.Map.Entry;
 public class Test {
 	public static void main(String[] args) {
 
-		Map<String,Agent> agents = new HashMap<String,Agent>() ;
+		Map<String,Agent> agents = new HashMap<>() ;
 
 		{
 			Agent ag1 = new Agent(10) ;
@@ -18,18 +18,18 @@ public class Test {
 			agents.put( "1045", ag3 ) ;
 		}
 		
-//		for ( Agent ag : agents.values() ) {
-//			System.out.println( ag ) ;
-//		}
+		for ( Agent ag : agents.values() ) {
+			System.out.println( ag ) ;
+		}
 		
 //		for ( String str : agents.keySet() ) {
 //			System.out.println( str ) ;
 //		}
 		
-		for ( Entry<String, Agent> ee : agents.entrySet() ) {
-			System.out.println( "getKey: " + ee.getKey() );
-			System.out.println( "getValue: " + ee.getValue() );
-		}
+//		for ( Entry<String, Agent> ee : agents.entrySet() ) {
+//			System.out.println( "getKey: " + ee.getKey() );
+//			System.out.println( "getValue: " + ee.getValue() );
+//		}
 		
 //		for ( Map.Entry entry : agents.entrySet() ) {
 //			System.out.println( "key: " + entry.getKey() ) ;

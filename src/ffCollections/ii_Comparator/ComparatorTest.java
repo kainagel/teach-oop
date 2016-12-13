@@ -18,7 +18,7 @@ class ComparatorTest
 		System.out.println ( "\ndemonstrate that id/age are in rnd sequence: " ) ;
 		printAllAgents(agents);
 
-		System.out.println ( "\nsort the agents according to CMP ..." ) ;
+		System.out.println ( "\nsort the agents according to comparator ..." ) ;
 		Collections.sort( agents /* , insert variable here */ ) ;
 
 		System.out.println ( "\nprint out the agents: " ) ;
