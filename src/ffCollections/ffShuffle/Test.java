@@ -2,7 +2,7 @@ package ffCollections.ffShuffle;
 
 import java.util.*;
 
-public class Test {
+class Test {
 	
 	private static void printAllAgentIds(List<Agent> agents) {
 		for ( Agent ag : agents ) {

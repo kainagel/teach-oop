@@ -6,7 +6,7 @@ import java.util.* ;
 class ComparableTest
 {
 	public static void main ( String[] args ) {
-		List<Agent> agents = new ArrayList<Agent>() ;
+		List<Agent> agents = new ArrayList<>() ;
 		
 		generateAgents(agents);
 		

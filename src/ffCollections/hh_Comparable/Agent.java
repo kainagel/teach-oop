@@ -1,6 +1,6 @@
 package ffCollections.hh_Comparable;
 
-public class Agent implements Comparable<Agent>
+class Agent implements Comparable<Agent>
 {
 	private int id_ ;
 	public int getId() { return id_ ; }

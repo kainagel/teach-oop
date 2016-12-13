@@ -1,6 +1,6 @@
 package ffCollections.ffShuffle;
 
-public class Agent {
+class Agent {
 	private long id ;
 	public Agent ( int ii ) {
 		this.id = ii ;

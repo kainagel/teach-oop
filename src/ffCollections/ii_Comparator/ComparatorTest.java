@@ -5,7 +5,7 @@ import java.util.*;
 class ComparatorTest
 {
 	public static void main ( String[] args ) {
-		List<Agent> agents = new ArrayList<Agent>() ;
+		List<Agent> agents = new ArrayList<>() ;
 		
 		System.out.println ( "\ngenerate agents with random id/age ..." ) ;
 		for ( int ii=0 ; ii<5 ; ii++ ) {
