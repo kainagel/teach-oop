@@ -1,4 +1,4 @@
-package ffCollections.jj_Shuffle;
+package ffCollections.ffShuffle;
 
 public class Agent {
 	private long id ;

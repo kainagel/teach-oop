@@ -9,8 +9,8 @@ class TreeTest
 	 */
 	public static void main ( String[] args ) 
 	{
-//		SortedSet<Double> doubles = new HashSet<Double>() ;
-		SortedSet<Double> doubles = new TreeSet<Double>() ;
+//		SortedSet<Double> doubles = new HashSet<>() ;
+		SortedSet<Double> doubles = new TreeSet<>() ;
 		for ( int ii=0 ; ii<6 ; ii++ ) {
 			double rnd = Math.random() ;
 			System.out.println ( " rnd: " + rnd ) ;
