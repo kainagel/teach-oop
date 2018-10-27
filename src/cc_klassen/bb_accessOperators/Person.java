@@ -1,67 +1,42 @@
 package cc_klassen.bb_accessOperators;
 
 class Person {
-	private long age ;
-	private String name ;
+	private int age ;
+	private String lastName ;
 	private boolean havingDrivingLicense ;
-	private double income ;
 	
-	boolean job_available ;
-	
-//	Person() {
-//		System.out.println("calling default ctor") ;
-//	}
-	
-//	Person( String tmp ) {
-//		System.out.println("calling 2nd ctor") ;
-//		name = tmp ;
-//	}
-	
-	void walk() {
-		System.out.println( " calling the walk method yet again") ;
+	void incAge() {
+		setAge(getAge() + 1) ;
 	}
 	
-	void aMethod(){
-		if ( job_available ) {
-			income = 30000 ;
-		} else {
-			income = 0 ;
-		}
-	}
-	
-	void addToAge( int tmp ) {
-		age += tmp ;
-	}
-	
-	long getAge() {
-		return age ;
-	}
-	void setAge( long tmp ) {
-		age = tmp ;
+	void printAllInformation() {
+		System.out.println( " age: " + getAge() + " lastName: " 
+				+ getLastName() + " drivLic: " + isHavingDrivingLicense() ) ;
 	}
 
-	public String getName() {
-		return name;
+	int getAge() {
+		return age;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	void setAge(int age) {
+		this.age = age;
 	}
 
-	public boolean isHavingDrivingLicense() {
+	String getLastName() {
+		return lastName;
+	}
+
+	void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	boolean isHavingDrivingLicense() {
 		return havingDrivingLicense;
 	}
 
-	public void setHavingDrivingLicense(boolean havingDrivingLicense) {
+	void setHavingDrivingLicense(boolean havingDrivingLicense) {
 		this.havingDrivingLicense = havingDrivingLicense;
 	}
 
-	public double getIncome() {
-		return income;
-	}
-
-	public void setIncome(double income) {
-		this.income = income;
-	}
-
+	
 }

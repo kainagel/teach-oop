@@ -1,12 +1,12 @@
-package cc_klassen.aa_test;
+package cc_klassen.bb_accessOperators;
 
 public class Main {
 	public static void main( String[] args ) {
 		Person schmitt = new Person() ;
 		
-		schmitt.age = 21 ;
-		schmitt.lastName = "Schmitt" ;
-		schmitt.havingDrivingLicense = true ;
+		schmitt.setAge(21) ;
+		schmitt.setLastName("Schmitt") ;
+		schmitt.setHavingDrivingLicense(true) ;
 		
 		schmitt.printAllInformation() ;
 		
