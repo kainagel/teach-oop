@@ -6,7 +6,7 @@ public class Test {
 
 		// write the data out
 		DataOutputStream out = new DataOutputStream(new
-				FileOutputStream("./oop/src/jj_io/bb_DataExample/invoice1.txt"));
+				FileOutputStream("./src/jj_io/bb_DataExample/invoice1.txt"));
 
 		double[] prices = { 19.99, 9.99, 15.99, 3.99, 4.99 };
 		int[] units = { 12, 8, 13, 29, 50 };

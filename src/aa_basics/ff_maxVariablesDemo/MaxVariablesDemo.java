@@ -8,6 +8,8 @@ class MaxVariablesDemo {
 		byte largestByte = Byte.MAX_VALUE ;
 		int largestInt = Integer.MAX_VALUE ;
 		System.out.println( " largestByte : " + largestByte ) ;
+		byte largestBytePlusOne = (byte) (largestByte + 1) ;
+		System.out.println( " largestByte+1 : " + largestBytePlusOne ) ;
 		System.out.println( " largestFloat : " + largestFloat ) ;
 		System.out.println( " largestDouble: " + largestDouble ) ;
 		System.out.println( " largestLong  : " + largestLong   ) ;
