@@ -1,15 +1,15 @@
 package cc_klassen.gg_accessRestr.other_package;
-public class PersonRecord {
+public class Person {
 	private int age ;
 
 	public int getAge() { return age ; }
 
-	public PersonRecord( int tmp ) {
+	public Person( int tmp ) {
 		age = tmp ;
 		System.out.println( " getAge: " + getAge() ) ;
 	}
 
-	public void aMethod( PersonRecord otherPerson ) {
+	public void aMethod( Person otherPerson ) {
 		otherPerson.age = -20 ;
 	}
 
