@@ -4,23 +4,51 @@ import java.util.*;
 import java.util.function.*;
 import java.util.stream.*;
 
-public class MyList<E> implements List<E> {
-	List<E> delegate = new ArrayList<>() ;
+public class MyList implements List<String> {
+	private List<String> delegate = new ArrayList<>() ;
+
+	@Override
+	public void forEach(Consumer<? super String> action){delegate.forEach(action);}
+
+	@Override
+	public int size() {
+		return delegate.size();
+	}
+
 	@Override
 	public boolean isEmpty() {
 		return delegate.isEmpty();
 	}
+
 	@Override
 	public boolean contains(Object o) {
 		return delegate.contains(o);
 	}
+
 	@Override
-	public Iterator<E> iterator() {
+	public Iterator<String> iterator() {
 		return delegate.iterator();
 	}
+
 	@Override
-	public boolean add(E e) {
+	public Object[] toArray() {
+		return delegate.toArray();
+	}
+
+	@Override
+	public <T> T[] toArray(T[] a) {
+		return delegate.toArray(a);
+	}
+
+	@Override
+	public boolean add(String e) {
+		System.out.println(" adding object=" + e ) ;
 		return delegate.add(e);
+	}
+
+	@Override
+	public boolean remove(Object o) {
+		return delegate.remove(o);
 	}
 
 	@Override
@@ -29,14 +57,33 @@ public class MyList<E> implements List<E> {
 	}
 
 	@Override
-	public boolean addAll(Collection<? extends E> c) {
+	public boolean addAll(Collection<? extends String> c) {
 		return delegate.addAll(c);
 	}
 
 	@Override
-	public boolean addAll(int index, Collection<? extends E> c) {
+	public boolean addAll(int index, Collection<? extends String> c) {
 		return delegate.addAll(index, c);
 	}
+
+	@Override
+	public boolean removeAll(Collection<?> c) {
+		return delegate.removeAll(c);
+	}
+
+	@Override
+	public boolean retainAll(Collection<?> c) {
+		return delegate.retainAll(c);
+	}
+
+	@Override
+	public  void replaceAll(UnaryOperator<String> operator){delegate.replaceAll(operator);}
+
+	@Override
+	public  boolean removeIf(Predicate<? super String> filter){return delegate.removeIf(filter);}
+
+	@Override
+	public  void sort(Comparator<? super String> c){delegate.sort(c);}
 
 	@Override
 	public void clear() {
@@ -54,14 +101,30 @@ public class MyList<E> implements List<E> {
 	}
 
 	@Override
-	public E get(int index) {
+	public String get(int index) {
 		return delegate.get(index);
 	}
 
 	@Override
-	public void add(int index, E element) {
+	public String set(int index, String element) {
+		return delegate.set(index, element);
+	}
+
+	@Override
+	public void add(int index, String element) {
 		delegate.add(index, element);
 	}
+
+	@Override
+	public  Stream<String> stream(){return delegate.stream();}
+
+	@Override
+	public String remove(int index) {
+		return delegate.remove(index);
+	}
+
+	@Override
+	public  Stream<String> parallelStream(){return delegate.parallelStream();}
 
 	@Override
 	public int indexOf(Object o) {
@@ -74,57 +137,20 @@ public class MyList<E> implements List<E> {
 	}
 
 	@Override
-	public ListIterator<E> listIterator() {
+	public ListIterator<String> listIterator() {
 		return delegate.listIterator();
 	}
 
 	@Override
-	public ListIterator<E> listIterator(int index) {
+	public ListIterator<String> listIterator(int index) {
 		return delegate.listIterator(index);
 	}
 
 	@Override
-	public int size() {
-		return delegate.size();
-	}
-
-	@Override
-	public boolean remove(Object o) {
-		return delegate.remove(o);
-	}
-
-	@Override
-	public boolean removeAll(Collection<?> c) {
-		return delegate.removeAll(c);
-	}
-
-	@Override
-	public E set(int index, E element) {
-		return delegate.set(index, element);
-	}
-
-	@Override
-	public E remove(int index) {
-		return delegate.remove(index);
-	}
-
-	@Override
-	public boolean retainAll(Collection<?> c) {
-		return delegate.retainAll(c);
-	}
-
-	@Override
-	public Object[] toArray() {
-		return delegate.toArray();
-	}
-
-	@Override
-	public <T> T[] toArray(T[] a) {
-		return delegate.toArray(a);
-	}
-
-	@Override
-	public List<E> subList(int fromIndex, int toIndex) {
+	public List<String> subList(int fromIndex, int toIndex) {
 		return delegate.subList(fromIndex, toIndex);
 	}
+
+	@Override
+	public  Spliterator<String> spliterator(){return delegate.spliterator();}
 }

@@ -19,7 +19,8 @@ class ComparatorTest
 		printAllAgents(agents);
 
 		System.out.println ( "\nsort the agents according to comparator ..." ) ;
-		Collections.sort( agents /* , insert variable here */ ) ;
+		Comparator<Agent> cmp = new MyComparator() ;
+		Collections.sort( agents, cmp ) ;
 
 		System.out.println ( "\nprint out the agents: " ) ;
 		printAllAgents(agents) ;

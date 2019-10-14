@@ -9,14 +9,15 @@ public class Test {
 //    	System.out.println( " num val of b: " + Character.getNumericValue('b') ) ;
     	
     	
-//        Character myCharacter = new Character('b');
-//        Character a2 = new Character('b');
-//        
-//        if ( myCharacter.equals(a2) ) {
-//            System.out.println ( " equal " ) ;
-//        } else {
-//            System.out.println ( " NOT equal " ) ;
-//        }
+        Character myCharacter = new Character('b');
+        Character a2 = new Character('b');
+        
+        if ( myCharacter.equals(a2) ) {
+//        if ( myCharacter == a2 ) {
+            System.out.println ( " equal " ) ;
+        } else {
+            System.out.println ( " NOT equal " ) ;
+        }
 
 //        char bbb = 'g' ;
 //        

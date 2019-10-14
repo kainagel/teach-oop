@@ -1,6 +1,6 @@
 package cc_klassen.ll_interfaceDemo;
 
-public class PersonImpl1 implements MobilePersonI {
+public class PersonImpl1 implements PersonI {
 	
 	private int age ;
 	
@@ -8,12 +8,9 @@ public class PersonImpl1 implements MobilePersonI {
 		age = tmpAge ;
 	}
 
+	@Override
 	public int getAge() {
 		return age;
 	}
 	
-	public void move() {
-		System.out.println("not implemented") ;
-	}
-
 }

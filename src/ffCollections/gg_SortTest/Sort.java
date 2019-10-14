@@ -6,9 +6,9 @@ class Sort
 
 	public static void main ( String[] args ) {
 
-		String[] abc = {"33", "22", "17", "40"};
+		Integer[] abc = {33, 22, 17, 40, 390};
 	
-		List<String> ll = Arrays.asList(abc) ;
+		List<Integer> ll = Arrays.asList(abc) ;
 		
 		System.out.println(ll);
 		

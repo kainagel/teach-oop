@@ -1,9 +1,9 @@
 package ee_polymorphism.aa_PolymorphWInheritance;
 
 class Person {
-
-	private int age ;
 	
+	private int age ;
+		
 	void setAge(int age) {
 		this.age = age;
 	}
@@ -11,6 +11,11 @@ class Person {
 	int getAge() {
 		System.out.println( "calling PERSON getAge() method" );
 		return age ; 
+	}
+	
+	@Override
+	public String toString() {
+		return " age=" + age ;
 	}
 	
 //	void aMethod() {

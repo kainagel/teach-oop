@@ -1,6 +1,6 @@
 package cc_klassen.ll_interfaceDemo;
 
-public class PersonImpl2 implements PersonI, MobileI {
+public class PersonImpl2 implements PersonI {
 	
 	private double age ;
 
@@ -8,12 +8,9 @@ public class PersonImpl2 implements PersonI, MobileI {
 		this.age = i ;
 	}
 
+	@Override
 	public int getAge() {
 		return (int) age ;
-	}
-
-	public void move() {
-		System.exit(-1);
 	}
 
 }

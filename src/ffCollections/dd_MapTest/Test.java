@@ -6,21 +6,37 @@ import java.util.Map.Entry;
 class Test {
 	public static void main(String[] args) {
 
-		Map<String,Agent> agents = new HashMap<>() ;
+		Map<Long,Agent> agents = new HashMap<>() ;
 
 		{
 			Agent ag1 = new Agent(10) ;
 			Agent ag2 = new Agent(20) ;
 			Agent ag3 = new Agent(30) ;
 			
-			agents.put( "blabla", ag1 ) ;
-			agents.put( "1044", ag2 ) ;
-			agents.put( "1045", ag3 ) ;
+			agents.put( new Long(20), ag1 ) ;
+			agents.put( new Long(21), ag2 ) ;
+			agents.put( new Long(200), ag3 ) ;
+			agents.put( new Long(2001), ag1 ) ;
 		}
 		
-		for ( Agent ag : agents.values() ) {
-			System.out.println( ag ) ;
+		for ( Long key : agents.keySet() ) {
+			System.out.println( "key=" + key + "; age=" + agents.get(key).getAge() ) ;
 		}
+//		for ( Entry<String,Agent> entry : agents.entrySet() ) {
+//			System.out.println( "key=" + entry.getKey() + "; age=" + entry.getValue().getAge() ) ;
+//		}
+		
+		
+//		Agent ag = agents.get("blablub") ;
+//		if ( ag==null ) {
+//			throw new RuntimeException("could not get agent") ;
+//		}
+//		System.out.println( ag.getAge() ) ;
+		
+		
+//		for ( Agent ag : agents.values() ) {
+//			System.out.println( ag.getAge() ) ;
+//		}
 		
 //		for ( String str : agents.keySet() ) {
 //			System.out.println( str ) ;
@@ -28,7 +44,8 @@ class Test {
 		
 //		for ( Entry<String, Agent> ee : agents.entrySet() ) {
 //			System.out.println( "getKey: " + ee.getKey() );
-//			System.out.println( "getValue: " + ee.getValue() );
+//			System.out.println( "getValue: " + ee.getValue().getAge() );
+//			System.out.println(""); 
 //		}
 		
 //		for ( Map.Entry entry : agents.entrySet() ) {

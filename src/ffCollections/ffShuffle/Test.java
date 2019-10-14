@@ -22,11 +22,11 @@ class Test {
 		printAllAgentIds(agents) ;
 		
 		Random rnd = new Random(4711) ;
-		
-		Collections.shuffle(agents, rnd ) ;
+
+		Collections.shuffle(agents) ;
 		printAllAgentIds(agents) ;
 
-		Collections.shuffle(agents, rnd ) ;
+		Collections.shuffle(agents ) ;
 		printAllAgentIds(agents) ;
 
 	}

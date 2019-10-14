@@ -6,6 +6,14 @@ public class Conversions {
 	
 	public static void main ( String[] args ) {
 		
+		String str = "123" ;
+		
+		
+		
+		int ii = Integer.parseInt(str) ;
+		
+		
+		
 //		String str = "5678" ;
 
 //		Double dblObj = Double.parseDouble(str) ;

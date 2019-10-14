@@ -12,78 +12,70 @@ import org.xml.sax.*;
 
 public class MyXMLReader {
 
+	private static int indent = 0 ;
+	
 	public static void main( String[] args ) {
 
-		try {
-
-			File file = new File("src/kk_xml/ee_StAXReader/plans.xml");
-			FileInputStream stream = new FileInputStream(file) ;
-
+		File file = new File("src/kk_xml/ee_StAXReader/plans.xml");
+		try ( FileInputStream stream = new FileInputStream(file) ; ) {
 			XMLInputFactory factory = XMLInputFactory.newInstance() ;
 			//			factory.setProperty(XMLInputFactory.SUPPORT_DTD, true ) ;
 //			factory.setProperty(XMLInputFactory.IS_VALIDATING, true);
 			XMLStreamReader in = factory.createXMLStreamReader( stream );
 
-//			// stream of events:
-//			while (in.hasNext()) {
-//				int eventTypeAsInt = in.next();
-//				System.out.println( " eventType: " + eventTypeAsInt ) ;
-//				printEventType(eventTypeAsInt) ;
+			// stream of events:
+			while (in.hasNext()) {
+				int eventTypeAsInt = in.next();
+				System.out.println( " eventType: " + eventTypeAsInt ) ;
+				printEventType(eventTypeAsInt) ;
+			}
+				
+//			while ( in.hasNext() ) {
+//				in.next() ; // advance one step; we don't need the result
+//
+//				if ( in.isStartElement() ) {
+//					printAndIncrementIndent() ;
+//					String elementName = in.getLocalName();
+//					System.out.print( elementName + ": ") ; 
+////					for ( int ii=0 ; ii<in.getAttributeCount() ; ii++ ) {
+////						String key = in.getAttributeLocalName(ii) ;
+////						String value = in.getAttributeValue(ii) ;
+////						System.out.print( key + "=" + value + " " ) ;
+////					}
+//					//text aus dem element rausholen ist einfacher als via isCharacters()
+//					if ("route".equalsIgnoreCase(in.getLocalName())) {
+//						System.out.print(in.getElementText());
+//						indent-- ; // (swallows route end element)
+//					}
+//					System.out.println() ;
+//				} else if ( in.isEndElement() ) {
+//					decrementAndPrintIndent() ;
+//					System.out.println( "end of: " + in.getLocalName() ) ;
+////				} else if ( in.isCharacters() ) {
+////										System.out.print( in.getText() ) ;
+////					// text is a bit messy to parse; I would avoid it as long as the document is not
+////					// a true text document.
+//				}
 //			}
 
-			int indent = 0 ;
-			while ( in.hasNext() ) {
-				in.next() ; // advance one step; we don't need the result
-
-				if ( in.isStartElement() ) {
-					indent = printAndIncrementIndent(indent) ;
-					String text = in.getLocalName();
-					System.out.print( text + ": ") ; 
-					for ( int ii=0 ; ii<in.getAttributeCount() ; ii++ ) {
-						String name = in.getAttributeLocalName(ii) ;
-						String value = in.getAttributeValue(ii) ;
-						System.out.print( name + "=" + value + " " ) ;
-					}
-					//text aus dem element rausholen, ist einfacher als via isCharacters()
-					if ("route".equalsIgnoreCase(in.getLocalName())) {
-						System.out.print(in.getElementText());
-					}
-					System.out.println() ;
-				} else if ( in.isEndElement() ) {
-					indent = decrementAndPrintIndent(indent) ;
-					System.out.println( "end of: " + in.getLocalName() ) ;
-//				} else if ( in.isCharacters() ) {
-//										System.out.print( in.getText() ) ;
-//					// text is a bit messy to parse; I would avoid it as long as the document is not
-//					// a true text document.
-				}
-			}
-
-		} catch (XMLStreamException e) {
-			e.printStackTrace();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		} catch (Exception e) {
+			throw new RuntimeException(e) ;
 		}
 
 	}
 
 
-	private static int printAndIncrementIndent(int indent) {
+	private static void printAndIncrementIndent() {
 		for ( int ii=0 ; ii<indent ; ii++ ) {
 			System.out.print("   ") ;
 		}
 		indent++ ;
-		return indent ;
 	}
-	private static int decrementAndPrintIndent(int indent) {
+	private static void decrementAndPrintIndent() {
 		indent-- ;
 		for ( int ii=0 ; ii<indent ; ii++ ) {
 			System.out.print("   ") ;
 		}
-		return indent ;
 	}
 
 	/**

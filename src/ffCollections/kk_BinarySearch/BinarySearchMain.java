@@ -3,7 +3,7 @@ package ffCollections.kk_BinarySearch;
 import java.util.*;
 
 
-class BinarySearchTest 
+class BinarySearchMain 
 {
 
 	public static void main ( String[] args ) 
@@ -19,7 +19,7 @@ class BinarySearchTest
 		System.out.println( "\n print out agents in their original sequence:" ) ;
 		for ( int ii=0 ; ii<agents.size() ; ii++ ) {
 			Agent ag = agents.get(ii) ;
-			System.out.println ( " ii: " + ii + " id: " + ag.getId() + " age: " + ag.getAge() ) ;
+			System.out.println ( " id: " + ag.getId() + " age: " + ag.getAge() ) ;
 		}
 
 //		System.out.println( "\n try to get existing agent with id via binary search" ) ;
@@ -39,8 +39,8 @@ class BinarySearchTest
 		System.out.println( "\n get existing agent with id via binary search" ) ;
 		Agent keyAgent = new Agent(206);
 		int ii = Collections.binarySearch( agents, keyAgent ) ;
-		Agent theAgent2 = agents.get(ii) ;
-//		Agent theAgent2 = keyAgent ;
+//		Agent theAgent2 = agents.get(ii) ;
+		Agent theAgent2 = keyAgent ;
 		System.out.println ( "\n theAgent has Id: " + theAgent2.getId() + " age: " + theAgent2.getAge() ) ;
 	}
 }
