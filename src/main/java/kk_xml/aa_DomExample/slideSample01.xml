@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!-- comment  -->
+
+<slideshow date="Date of publication" author="Yours Truly" title="Sample Slide Show" >
+
+    <!-- TITLE SLIDE -->
+    <slide type="sometimes">
+      <title>Wake up to WonderWidgets!</title>
+    </slide>      
+    
+    <dada attr="test">
+      <content> mycontent </content>
+    </dada>              
+
+    <!-- OVERVIEW -->
+    <slide type="all">
+      <title>Overview</title>
+      <item>Why <em>WonderWidgets</em> are great</item>
+      <item/>
+      <item>Who <em>buys</em> WonderWidgets</item>
+    </slide>
+
+</slideshow>
