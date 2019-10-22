@@ -18,6 +18,8 @@ class HelloWorld {
 		// another change
 
 		// a third change
+		
+		// a fourth change
 	}
 
 // a comment near the bottom
