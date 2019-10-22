@@ -14,6 +14,8 @@ class HelloWorld {
 		// this is yet another comment
 
 		// a change
+
+		// another change
 	}
 
 // a comment near the bottom
