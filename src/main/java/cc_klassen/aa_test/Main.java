@@ -2,17 +2,24 @@ package cc_klassen.aa_test;
 
 public class Main {
 	public static void main( String[] args ) {
-		Person schmitt = new Person() ;
-		
-		schmitt.age = 21 ;
-		schmitt.lastName = "Schmitt" ;
-		schmitt.havingDrivingLicense = true ;
-		
-		schmitt.printAllInformation() ;
-		
-		schmitt.incAge();
-		
-		schmitt.printAllInformation() ;
+
+		double age = 20.;
+
+		// ---
+
+		Person nagel = new Person() ;
+		nagel.age = 22 ;
+		nagel.height=190. ;
+		nagel.lastName = "Nagel" ;
+
+		Person schmitz = new Person() ;
+		schmitz.age=62 ;
+		schmitz.height=33 ;
+		schmitz.lastName="Schulze" ;
+
+		nagel.printYourself();
+		schmitz.printYourself();
+
 
 	}
 }

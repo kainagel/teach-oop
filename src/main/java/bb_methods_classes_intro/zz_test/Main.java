@@ -1,9 +1,9 @@
 package bb_methods_classes_intro.zz_test;
 
-class Test {
+class Main{
 	
 	public static void main( String[] args ) {
-		double cc = Test.doSomethingWith( 1, 2 ) ;
+		double cc = Main.doSomethingWith( 1, 2 ) ;
 		System.out.println( "cc: " + cc );
 		
 	}
