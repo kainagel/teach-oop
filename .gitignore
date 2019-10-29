@@ -13,5 +13,7 @@ hs_err_pid*
 /bin/
 /latex/
 
-*.iml
+/target
+workspace.xml
+
 
