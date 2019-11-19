@@ -8,7 +8,7 @@ class Person {
 		this.age = age;
 	}
 	
-	int getAge() {
+	int getAAge() {
 		System.out.println( "calling PERSON getAge() method" );
 		return age ; 
 	}

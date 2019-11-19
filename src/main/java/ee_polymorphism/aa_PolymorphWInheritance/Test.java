@@ -6,26 +6,30 @@ class Test {
 		Person person = new Person() ;
 		person.setAge(22);
 		
-		Child daughter = new Child();
-		daughter.setAge(7);
-		daughter.setSchool("Grundschule der Dreckspatzen");
+		Child child = new Child();
+		child.setAge(7);
+		child.setSchool("Grundschule der Dreckspatzen");
 		
-		Adult mother = new Adult();
-		mother.setAge(35);
-		mother.setEmployer("TU Berlin");
+		Adult adult = new Adult();
+		adult.setAge(35);
+		adult.setEmployer("TU Berlin");
+
+		System.out.println( "person.getAge:" + person.getAAge() );
+		System.out.println( "child.getAge:" + child.getAAge() );
+		System.out.println( "adult.getAge:" + adult.getAAge() );
+
+//		System.out.println( "adult.toString():" + adult.toString() ) ;
 		
-		System.out.println( "mother.toString():" + mother.toString() ) ;
-		
-//		System.out.println( "age=" + mother.getAge() + "; employer=" + mother.getEmployer() );
-//		System.out.println( "age=" + daughter.getAge() + "; school=" + daughter.getSchool() );
-////		System.out.println( mother.getAgeInMonth() );
+//		System.out.println( "age=" + adult.getAge() + "; employer=" + adult.getEmployer() );
+//		System.out.println( "age=" + child.getAge() + "; school=" + child.getSchool() );
+////		System.out.println( adult.getAgeInMonth() );
 		
 //		// folgendes geht nicht:
-//		System.out.println("Mutter ging frueher zur " + mother.getSchool() );
-//		System.out.println("Tochter will spaeter zu " + daughter.getEmployer() );
+//		System.out.println("Mutter ging frueher zur " + adult.getSchool() );
+//		System.out.println("Tochter will spaeter zu " + child.getEmployer() );
 		
-//		mother.aMethod();
+//		adult.aMethod();
 		
-//		System.out.println( mother.toString() );		
+//		System.out.println( adult.toString() );
 	}
 }

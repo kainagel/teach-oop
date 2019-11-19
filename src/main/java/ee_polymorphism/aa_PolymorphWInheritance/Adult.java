@@ -22,10 +22,10 @@ class Adult extends Person {
 //		return 12 * getAge();
 //	}
 	
-	@Override
-	int getAge() {
+//	@Override
+	int getAAge() {
 		System.out.println( "calling ADULT getAge() method" );
-		return super.getAge() ;
+		return super.getAAge() ;
 	}
 	
 //	@Override
