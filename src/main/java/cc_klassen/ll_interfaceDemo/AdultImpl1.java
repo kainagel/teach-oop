@@ -1,6 +1,6 @@
 package cc_klassen.ll_interfaceDemo;
 
-final class AdultImpl1 implements PersonI, Employable {
+final class AdultImpl1 implements Person, Employable {
 
 	@Override
 	public int getAge() {

@@ -1,6 +1,6 @@
 package cc_klassen.ll_interfaceDemo;
 
-public class PersonImpl2 implements PersonI {
+public class PersonImpl2 implements Person{
 	
 	private double age ;
 
