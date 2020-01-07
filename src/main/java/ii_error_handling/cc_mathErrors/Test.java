@@ -1,5 +1,4 @@
 package ii_error_handling.cc_mathErrors;
-import java.io.* ;
 
 class Test {
 

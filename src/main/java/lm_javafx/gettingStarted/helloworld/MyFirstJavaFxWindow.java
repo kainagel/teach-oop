@@ -1,14 +1,12 @@
 package lm_javafx.gettingStarted.helloworld;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class MyFirstJavaFxWindow extends Application {
+public final class MyFirstJavaFxWindow extends Application {
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -16,7 +14,7 @@ public class MyFirstJavaFxWindow extends Application {
 
 		Button button = new Button("Klick mich");
 
-//		button.setOnAction( new MyButtonEventHandler() );
+		button.setOnAction( event ->  System.out.println( "Hello World!" ) );
 
 		StackPane layout = new StackPane();
 		layout.getChildren().add(button);
@@ -30,10 +28,4 @@ public class MyFirstJavaFxWindow extends Application {
 		launch(args);
 	}
 
-	private static class MyButtonEventHandler implements EventHandler<ActionEvent>{
-		@Override
-		public void handle(ActionEvent event) {
-			System.out.println("Hello World!");
-		}
-	}
 }

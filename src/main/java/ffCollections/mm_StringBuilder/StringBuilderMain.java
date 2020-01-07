@@ -1,4 +1,4 @@
-package ffCollections.ll_StringBuilder;
+package ffCollections.mm_StringBuilder;
 class StringBuilderMain {
 
 	public static void main ( String[] args ) 

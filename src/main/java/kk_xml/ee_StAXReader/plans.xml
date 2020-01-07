@@ -2,7 +2,7 @@
 
 <!DOCTYPE plans SYSTEM "plans.dtd" >
  
-<plans>
+<plans >
 		<person id="äß" >
 			<plan>
 				<act type="h" x100="680200" y100="236800" link="3697"

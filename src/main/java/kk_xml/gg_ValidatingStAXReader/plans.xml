@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE plans SYSTEM "plans.dtd" >
 <plans>
-		<person id="blabla" newtag="blubblub">
+		<person id="blabla">
 			<plan>
 				<act type="h" x100="680200" y100="236800" link="3697"
 					end_time="07:17:36" />

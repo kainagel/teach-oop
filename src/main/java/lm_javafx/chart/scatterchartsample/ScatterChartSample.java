@@ -54,9 +54,8 @@ public class ScatterChartSample extends Application {
     @Override public void start(Stage stage) {
         stage.setTitle("Scatter Chart Sample");
         final NumberAxis xAxis = new NumberAxis(0, 10, 1);
-        final NumberAxis yAxis = new NumberAxis(-100, 500, 100);        
-        final ScatterChart<Number,Number> sc = 
-            new ScatterChart<>(xAxis,yAxis);
+        final NumberAxis yAxis = new NumberAxis(-100, 500, 100);
+        final ScatterChart<Number,Number> sc = new ScatterChart<>(xAxis,yAxis);
         xAxis.setLabel("Age (years)");                
         yAxis.setLabel("Returns to date");
         sc.setTitle("Investment Overview");
@@ -80,23 +79,21 @@ public class ScatterChartSample extends Application {
         series1.getData().add(new XYChart.Data(1.8, 81.4));
         series1.getData().add(new XYChart.Data(7.3, 110.3));
         series1.getData().add(new XYChart.Data(2.7, 41.2));
-           
+
         sc.setPrefSize(500, 400);
         sc.getData().addAll(series1);
-        Scene scene  = new Scene(new Group());
-        final VBox vbox = new VBox();
-        final HBox hbox = new HBox();
-        
+        final Group group = new Group();
+        Scene scene  = new Scene( group );
+
         final Button add = new Button("Add Series");
         add.setOnAction((ActionEvent e) -> {
-            if (sc.getData() == null)
-                sc.setData(FXCollections.<XYChart.Series<Number,
-                        Number>>observableArrayList());
-            ScatterChart.Series<Number, Number> series = 
-                    new ScatterChart.Series<>();
+            if (sc.getData() == null){
+                sc.setData( FXCollections.<XYChart.Series<Number,
+                                                                         Number>>observableArrayList() );
+            }
+            ScatterChart.Series<Number, Number> series = new ScatterChart.Series<>();
             series.setName("Option "+(sc.getData().size()+1));
-            for (int i=0; i<100; i++) series.getData().add(
-                new ScatterChart.Data<>(Math.random()*100, Math.random()*500));
+            for (int i=0; i<100; i++) series.getData().add( new ScatterChart.Data<>(Math.random()*100, Math.random()*500));
             sc.getData().add(series);
         });
         
@@ -107,18 +104,20 @@ public class ScatterChartSample extends Application {
                     Math.random()*(sc.getData().size()-1)));
         });
         
-        final DropShadow shadow = new DropShadow();
-        shadow.setOffsetX(2);
-        shadow.setColor(Color.GREY);
-        sc.setEffect(shadow);
-                
-        hbox.setSpacing(10);
+//        final DropShadow shadow = new DropShadow();
+//        shadow.setOffsetX(2);
+//        shadow.setColor(Color.GREY);
+//        sc.setEffect(shadow);
+
+        final HBox hbox = new HBox();
+//        hbox.setSpacing(10);
         hbox.getChildren().addAll(add, remove);
-        
+
+        final VBox vbox = new VBox();
         vbox.getChildren().addAll(sc, hbox);
-        hbox.setPadding(new Insets(10, 10, 10, 50));
+//        hbox.setPadding(new Insets(10, 10, 10, 50));
         
-        ((Group)scene.getRoot()).getChildren().add(vbox);
+        group.getChildren().add(vbox);
         //scene.getStylesheets().add("lm_javafx.chart.scatterchartsample/Chart.css");
         stage.setScene(scene);
         stage.show();

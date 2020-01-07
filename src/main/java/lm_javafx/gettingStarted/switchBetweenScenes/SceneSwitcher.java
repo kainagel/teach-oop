@@ -1,12 +1,16 @@
 package lm_javafx.gettingStarted.switchBetweenScenes;
 
 import javafx.application.Application;
+import javafx.collections.ObservableList;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
+import java.util.List;
 
 public class SceneSwitcher extends Application {
 
@@ -20,7 +24,7 @@ public class SceneSwitcher extends Application {
 		Label label1 = new Label("Welcome to scene 1");
 		Button button1 = new Button("Go to scene 2");
 		button1.setOnAction(e -> {
-			for ( int ii=0 ; ii<100_000_000; ii++ ) {
+			for ( int ii=0 ; ii<1000_000_000; ii++ ) {
 				Math.random() ;
 			}
 			primaryStage.setScene(scene2);
@@ -30,7 +34,7 @@ public class SceneSwitcher extends Application {
 		layout1.getChildren().addAll(label1, button1);
 		scene1 = new Scene(layout1, 200, 200);
 
-		// Content of scene 2
+//		// Content of scene 2
 		Button button2 = new Button("Let's go back to scene 1");
 		button2.setOnAction(e -> primaryStage.setScene(scene1));
 		// Layout for scene 2
