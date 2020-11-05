@@ -1,14 +1,18 @@
 package kk_xml.ee_StAXReader;
 
-import java.io.*;
+import org.xml.sax.SAXException;
 
-import javax.xml.*;
-import javax.xml.stream.*;
-import javax.xml.stream.events.*;
-import javax.xml.transform.stax.*;
-import javax.xml.validation.*;
-
-import org.xml.sax.*;
+import javax.xml.XMLConstants;
+import javax.xml.stream.XMLInputFactory;
+import javax.xml.stream.XMLStreamReader;
+import javax.xml.stream.events.XMLEvent;
+import javax.xml.transform.stax.StAXSource;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
+import javax.xml.validation.Validator;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 
 public class MyXMLReader {
 
@@ -16,47 +20,54 @@ public class MyXMLReader {
 	
 	public static void main( String[] args ) {
 
-		File file = new File("src/kk_xml/ee_StAXReader/plans.xml");
+		File file = new File("src/main/java/kk_xml/ee_StAXReader/plans.xml");
+
 		try ( FileInputStream stream = new FileInputStream(file) ; ) {
 			XMLInputFactory factory = XMLInputFactory.newInstance() ;
-			//			factory.setProperty(XMLInputFactory.SUPPORT_DTD, true ) ;
-//			factory.setProperty(XMLInputFactory.IS_VALIDATING, true);
+
+//			factory.setProperty(XMLInputFactory.IS_VALIDATING, true); // does not work with java standard XMLInputFactory.
+			// the java default implementation of this does not allow validation.  The woodstox implementation does but needs a dependency ...
+			// thus see teach-oop-with maven.
+			// In theory, it should be possible to do validation separately from parsing even with the java standard package.  But it seems that
+			// this only works for xsd but not for dtd.
+			// :-(
+
 			XMLStreamReader in = factory.createXMLStreamReader( stream );
 
 			// stream of events:
-			while (in.hasNext()) {
-				int eventTypeAsInt = in.next();
-				System.out.println( " eventType: " + eventTypeAsInt ) ;
-				printEventType(eventTypeAsInt) ;
-			}
-				
-//			while ( in.hasNext() ) {
-//				in.next() ; // advance one step; we don't need the result
-//
-//				if ( in.isStartElement() ) {
-//					printAndIncrementIndent() ;
-//					String elementName = in.getLocalName();
-//					System.out.print( elementName + ": ") ; 
-////					for ( int ii=0 ; ii<in.getAttributeCount() ; ii++ ) {
-////						String key = in.getAttributeLocalName(ii) ;
-////						String value = in.getAttributeValue(ii) ;
-////						System.out.print( key + "=" + value + " " ) ;
-////					}
-//					//text aus dem element rausholen ist einfacher als via isCharacters()
-//					if ("route".equalsIgnoreCase(in.getLocalName())) {
-//						System.out.print(in.getElementText());
-//						indent-- ; // (swallows route end element)
-//					}
-//					System.out.println() ;
-//				} else if ( in.isEndElement() ) {
-//					decrementAndPrintIndent() ;
-//					System.out.println( "end of: " + in.getLocalName() ) ;
-////				} else if ( in.isCharacters() ) {
-////										System.out.print( in.getText() ) ;
-////					// text is a bit messy to parse; I would avoid it as long as the document is not
-////					// a true text document.
-//				}
+//			while (in.hasNext()) {
+//				int eventTypeAsInt = in.next();
+//				System.out.println( " eventType: " + eventTypeAsInt ) ;
+//				printEventType(eventTypeAsInt) ;
 //			}
+				
+			while ( in.hasNext() ) {
+				in.next() ; // advance one step; we don't need the result
+
+				if ( in.isStartElement() ) {
+					printAndIncrementIndent() ;
+					String elementName = in.getLocalName();
+					System.out.print( elementName + ": ") ;
+					for ( int ii=0 ; ii<in.getAttributeCount() ; ii++ ) {
+						String key = in.getAttributeLocalName(ii) ;
+						String value = in.getAttributeValue(ii) ;
+						System.out.print( key + "=" + value + " " ) ;
+					}
+					//text aus dem element rausholen ist einfacher als via isCharacters()
+					if ("route".equalsIgnoreCase(in.getLocalName())) {
+						System.out.print(in.getElementText());
+						indent-- ; // (swallows route end element)
+					}
+					System.out.println() ;
+				} else if ( in.isEndElement() ) {
+					decrementAndPrintIndent() ;
+					System.out.println( "end of: " + in.getLocalName() ) ;
+//				} else if ( in.isCharacters() ) {
+//										System.out.print( in.getText() ) ;
+//					// text is a bit messy to parse; I would avoid it as long as the document is not
+//					// a true text document.
+				}
+			}
 
 		} catch (Exception e) {
 			throw new RuntimeException(e) ;
@@ -119,10 +130,10 @@ public class MyXMLReader {
 	}
 
 	private static void validate(XMLStreamReader in) {
-		SchemaFactory sfactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-		Schema schema;
+//		SchemaFactory sfactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+		SchemaFactory sfactory = SchemaFactory.newInstance(XMLConstants.XML_DTD_NS_URI);
 		try {
-			schema = sfactory.newSchema(new File("src/kk_xml/ee_StAXReader/plans.dtd"));
+			Schema schema = sfactory.newSchema( new File( "src/main/java/kk_xml/ee_StAXReader/plans.dtd" ) );
 			System.err.println("will only work with xsd") ;
 			System.exit(-1);
 
@@ -134,8 +145,10 @@ public class MyXMLReader {
 		} catch (SAXException e) {
 			System.err.println(in.getLocation()) ;
 			e.printStackTrace();
+			throw new RuntimeException(  ) ;
 		} catch (IOException e) {
 			e.printStackTrace();
+			throw new RuntimeException(  ) ;
 		}
 	}
 
