@@ -1,6 +1,48 @@
 package aa_basics.ee_Control;
-class Control {
+class ThisIsAClassForTeachingControlStructures{
 	public static void main  ( String[] args ) {
+
+//		double thisIsMyNewDoubleVariable = 20 ;
+//
+//		for ( int ii=0 ; ii<20; ii++ ) {
+//			final double THIS_IS_MY_NEW_CONSTANT;
+//
+//			THIS_IS_MY_NEW_CONSTANT = 20;
+//
+//			int myVariable = 20;
+//
+//			System.out.println( "myVariable=" + myVariable );
+//
+//			System.out.println( thisIsMyNewDoubleVariable ) ;
+//		}
+//
+//		boolean aa = true;
+//		boolean bb = false ;
+//
+//		if ( aa & bb ) {
+//			System.out.println("tata");
+//		}
+
+		int void2 = 20 ;
+
+		int ii = 20 ;
+
+		ii++;
+		ii = ii+1;
+
+		ii+=20 ;
+		ii = ii + 20 ;
+
+		ii *= 30 ;
+
+		ii /= 25.3;
+
+
+//		int ii=0 ;
+//		for (  ;  ;  ) {
+//			System.out.println(ii);
+//			ii = ii+2;
+//		}
 		
 //		for ( int ii=0 ; ; ii++ ) {
 //			System.out.println( "ii=" + ii );
@@ -11,19 +53,21 @@ class Control {
 //		}
 //		System.out.println("here2");
 
-//		double ii=0 ;
 //		double sum = 0. ;
-//		while (ii <= 1000 ) {
+//		for ( int ii=0 ;  ii <= 1000 ; ) {
 //			sum = sum + ii ;
-//			ii++ ;
+//			ii = ii+1 ;
 //		}
 //		System.out.println( sum );
 		
-//		int ii = 7 ;
+//		int ii = 31 ;
+//
 //		if ( ii < 10 ) {
 //			System.out.println( " ii is less than 10 " ) ;
 //		} else if ( ii < 20 ) {
 //			System.out.println( " ii is less than 20 " ) ;
+//		} else if ( ii < 15 ) {
+//			System.out.println( " ii is less than 30 " ) ;
 //		} else {
 //			System.out.println( " else statement triggered " ) ;
 //		}
@@ -41,12 +85,12 @@ class Control {
 //			System.out.println( "no it is not" ) ;
 //		}
 
-		for (  double ii=1 ; ii<20 ;  ) {
-
-			ii*=1.1 ;
-
-			System.out.println(ii) ;
-		}
+//		for (  double ii=1 ; ii<20 ;  ) {
+//
+//			ii*=1.1 ;
+//
+//			System.out.println(ii) ;
+//		}
 
 
 //		int jj ;
@@ -84,15 +128,19 @@ class Control {
 
 
 //		int month = 2 ;
-//		switch ( month ) {
-//		case 1 : 
-//			System.out.println ( "Jan" ) ; 
-//		case 2 : 
-//			System.out.println ( "Feb" ) ;
-//		case 3 : 
-//			System.out.println ( "Mar" ) ;
-//		default: 
-//			System.out.println ( "Error" ) ;
+//		switch( month ){
+//			case 1:
+//				System.out.println( "Jan" );
+//				break;
+//			case 2:
+//				System.out.println( "Feb" );
+//				break;
+//			case 3:
+//				System.out.println( "Mar" );
+//				break;
+//			default:
+//				System.out.println( "Error" );
+//				break;
 //		}
 
 
@@ -159,6 +207,16 @@ class Control {
 //		}
 
 		// a change
+
+//		for ( int ii=1 ; ii<100 ; ii=ii+1 ) {
+//			System.out.println ( " ii: " + ii ) ;
+//			if ( ii > 50 && ii < 60 ) {
+//				System.out.println ( " skipping some work " ) ;
+//				continue ;
+//			}
+//			System.out.println ( ii*ii + " " + ii*ii*ii + " " + ii*ii*ii*ii ) ;
+//		}
+
 
 	}
 }

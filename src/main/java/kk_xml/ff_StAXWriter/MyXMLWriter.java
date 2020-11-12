@@ -4,16 +4,14 @@ import java.io.*;
 
 import javax.xml.stream.*;
 
-import com.sun.xml.internal.txw2.output.*;
-
 public class MyXMLWriter {
 
 	public static void main( String[] args ) { 
 		XMLOutputFactory factory =  XMLOutputFactory.newInstance();
 		try {
 			String filename = "src/kk_xml/ff_StAXWriter/test.xml" ;
-			XMLStreamWriter tmp = factory.createXMLStreamWriter(new FileWriter(filename));
-			XMLStreamWriter out = new IndentingXMLStreamWriter(tmp);
+			XMLStreamWriter out = factory.createXMLStreamWriter(new FileWriter(filename));
+//			XMLStreamWriter out = new IndentingXMLStreamWriter(tmp);
 			out.writeStartDocument("utf-8","1.0");
 			
 			out.writeStartElement("buildings") ;

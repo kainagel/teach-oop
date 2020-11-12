@@ -1,29 +1,20 @@
 package aa_basics.bb_helloWorld;
 
-// a comment near the top
 
 class HelloWorld {
 	
-	public static void main  ( String[] args ) {
-		System.out.println ( "Hello World" ) ;
-		System.out.println ( "Hello World again" + " abc") ;
-		double aa = 3. + 4. ;
-		System.out.println( aa ) ;
-		// this is a comment
-		// this is another comment
-		// this is yet another comment
+	public static void main ( String[] args ) {
 
-		// a change
+		int aa = -13 ;
 
-		// another change
+		if ( aa >= 10 ) {
+			System.out.println(" aa is larger or equal 10 ");
+		} else {
+			System.out.println("aa is smaller than 10");
+		}
 
-		// a third change
-		
-		// a fourth change
 
-		// a 5th change
 	}
 
-// a comment near the bottom
 
 }
