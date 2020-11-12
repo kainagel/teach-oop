@@ -5,7 +5,7 @@ class Main{
 
 	public static void main  ( String[] args ) {
 
-		System.out.println( Math.max(3.,7.) );
+		System.out.println( Math.sin( 1.3 ) );
 
 	}
 

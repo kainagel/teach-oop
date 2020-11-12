@@ -2,10 +2,16 @@ package bb_methods_classes_intro.bb_StaticMethod;
 
 class MyMain{
 	public static void main  ( String[] args ) {
-		double aa = 15 ; double bb = 30 ;
+
+		double aa = 45 ; double bb = 30 ;
+
+//		double cc = Math.max( aa, bb );
 		double cc = myMax( aa, bb );
+
 		System.out.println ( " cc: " + cc ) ;
+
 	}
+
 	private static double myMax( double aa, double bb ){
 		double cc;
 		if ( aa > bb ) {

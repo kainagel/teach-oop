@@ -4,6 +4,7 @@ class Main{
 	public static void main  ( String[] args ) {
 		double aa = 15. ;
 		double bb = 30. ;
-		System.out.println ( " max: " + MyUtils.max(aa,bb) ) ;
+		double cc = MyUtils.max( aa, bb );
+		System.out.println ( " max: " + cc ) ;
 	}
 }
