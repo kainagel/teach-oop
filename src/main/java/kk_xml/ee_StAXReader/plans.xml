@@ -3,10 +3,9 @@
 <!DOCTYPE plans SYSTEM "plans.dtd" >
  
 <plans >
-		<person id="äß" >
+		<person id="äß" gender="male">
 			<plan>
-				<act type="h" x100="680200" y100="236800" link="3697"
-					end_time="07:17:36" />
+				<act type="h" x100="680200" y100="236800" link="3697" end_time="07:17:36"/>
 				<leg mode="train" dep_time="07:17:36">
 					<route>1315 1298 1316 1317</route>
 				</leg>
@@ -18,6 +17,9 @@
 				<act type="h" x100="680200" y100="236800" link="3697" />
 			</plan>
 		</person>
+
+<!--	dies ist ein Kommentar-->
+
 		<person id="437">
 			<plan>
 				<act type="h" x100="679100" y100="235600" link="3695"

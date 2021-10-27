@@ -6,7 +6,23 @@ class ComparatorTest
 {
 	public static void main ( String[] args ) {
 		List<Agent> agents = new ArrayList<>() ;
-		
+
+		generateAgents( agents );
+
+		System.out.println ( "\ndemonstrate that id/age are in rnd sequence: " ) ;
+		printAllAgents(agents);
+
+		System.out.println ( "\nsort the agents according to comparator ..." ) ;
+
+		Comparator<Agent> cmp = new MyComparator();
+		Collections.sort( agents, cmp );
+
+		System.out.println ( "\nprint out the agents: " ) ;
+		printAllAgents(agents) ;
+
+	}
+
+	private static void generateAgents( List<Agent> agents ){
 		System.out.println ( "\ngenerate agents with random id/age ..." ) ;
 		for ( int ii=0 ; ii<5 ; ii++ ) {
 			double age = Math.random();
@@ -14,17 +30,6 @@ class ComparatorTest
 			Agent ag = new Agent ( id, age ) ;
 			agents.add(ag) ;
 		}
-		
-		System.out.println ( "\ndemonstrate that id/age are in rnd sequence: " ) ;
-		printAllAgents(agents);
-
-		System.out.println ( "\nsort the agents according to comparator ..." ) ;
-		Comparator<Agent> cmp = new MyComparator() ;
-		Collections.sort( agents, cmp ) ;
-
-		System.out.println ( "\nprint out the agents: " ) ;
-		printAllAgents(agents) ;
-
 	}
 
 	private static void printAllAgents(List<Agent> agents) {

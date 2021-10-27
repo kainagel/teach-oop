@@ -11,9 +11,15 @@ class Sort
 		List<Integer> ll = Arrays.asList(abc) ;
 		
 		System.out.println(ll);
-		
-		Collections.sort(ll); 
-		
+
+		System.out.println(ll);
+
+		Collections.shuffle(ll);
+
+		System.out.println(ll);
+
+		Collections.sort(ll);
+
 		System.out.println(ll);
 
 	}

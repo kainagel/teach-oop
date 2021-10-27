@@ -6,10 +6,6 @@ class Main {
 
 		long aa = 25;
 
-		abc( aa );
-
-	}
-	private static void abc( long aa ){
 		for ( int ii=0 ; ; ii++ ) {
 			if ( ii*ii == aa ) {
 				System.out.println( ii + " is sqrt of " + aa );
@@ -19,7 +15,7 @@ class Main {
 				break ;
 			}
 		}
+
 	}
- // a change
 
 }

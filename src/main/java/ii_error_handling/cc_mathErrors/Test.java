@@ -5,14 +5,16 @@ class Test {
 	public static void main( String[] args ) 
 	{
 
-//		int cc=-22 ;
-////		try {
-//			int aa = 21 ;
-//			int bb = 0 ;
-//			cc = aa/bb ;
-////		} catch ( ArithmeticException ee ) {
-////			ee.printStackTrace() ;
-////		}
+		int cc=-22 ;
+		try {
+
+			int aa = 0 ;
+			int bb = 0 ;
+			cc = aa/bb ;
+
+		} catch ( ArithmeticException ee ) {
+			ee.printStackTrace() ;
+		}
 //		System.err.println( " cc: " + cc ) ;
 
 //		double aaa = 1 ;
@@ -26,7 +28,7 @@ class Test {
 		double result = Math.log(-1) ;
 		System.out.println ( " result: " + result ) ;
 
-		System.out.println ( " here" ) ;
+		System.out.println ( " done" ) ;
 	}
 
 }

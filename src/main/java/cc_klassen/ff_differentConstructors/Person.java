@@ -2,33 +2,19 @@ package cc_klassen.ff_differentConstructors;
 
 class Person {
 	private int age ;
-	private String lastName ;
+	private final String lastName;
 	private boolean havingDrivingLicense ;
-	
-	Person() {
+
+	Person( String lastName ) {
+		this.lastName = lastName;
 	}
 
-	Person( int age ) {
-		this.age = age ;
-	}
-	
-	Person( String lastName ) {
-		this.lastName = lastName ;
-	}
-	
-	Person( int age, String lastName ) {
-		this.age = age ;
-		this.lastName = lastName ;
-	}
-	
-	
 	void incAge() {
 		setAge(getAge() + 1) ;
 	}
 	
 	void printAllInformation() {
-		System.out.println( " age: " + getAge() + " lastName: " 
-				+ getLastName() + " drivLic: " + isHavingDrivingLicense() ) ;
+		System.out.println( " age: " + getAge() + " lastName: " + lastName + " drivLic: " + havingDrivingLicense ) ;
 	}
 
 	int getAge() {
@@ -43,9 +29,9 @@ class Person {
 		return lastName;
 	}
 
-	void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+//	void setLastName(String lastName) {
+//		this.lastName = lastName;
+//	}
 
 	boolean isHavingDrivingLicense() {
 		return havingDrivingLicense;

@@ -5,12 +5,33 @@ import java.util.*;
 public class Conversions {
 	
 	public static void main ( String[] args ) {
+
+		double aVariable = 23.;
+		int bVariable = 44;
+
+		Double cVariable = Double.valueOf( 23. );
+		Integer dVariable = new Integer( 44 );
+
+		double result = cVariable.doubleValue();
+
+		cVariable.toString();
+
+		String str = "123.";
+
+		double result1 = Double.parseDouble( str );
+
+		Double result2 = Double.valueOf( 3. );
+
+		Double result3 = Double.valueOf( str );
+
+//		Xyz.valueOf( someOtherRepresentation ) ;
+
 		
-		String str = "123" ;
-		
-		
-		
-		int ii = Integer.parseInt(str) ;
+//		String str = "123" ;
+//
+//
+//
+//		int ii = Integer.parseInt(str) ;
 		
 		
 		

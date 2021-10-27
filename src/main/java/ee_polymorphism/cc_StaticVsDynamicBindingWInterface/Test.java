@@ -2,12 +2,22 @@ package ee_polymorphism.cc_StaticVsDynamicBindingWInterface;
 
 class Test {
 
-	public static void main(String[] args) {
+	public static void main(String[] args){
 		AgentI mueller = new Adult();
+		callSubroutine( mueller );
+	}
+
+
+
+
+
+
+
+	static void callSubroutine( AgentI person ) {
+
+		person.aMethod(); // dynamic binding
 		
-		mueller.aMethod(); // dynamic binding
-		
-		aMethod(mueller); // static binding
+		aMethod(person); // static binding
 	}
 	
 	static void aMethod( AgentI agent){

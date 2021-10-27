@@ -1,5 +1,7 @@
 package ffCollections.cc_SetAndQueue;
-class Agent implements Comparable<Agent> {
+class Agent
+//		implements Comparable<Agent>
+		{
 	private int id ;
 	
 	public int getId() {
@@ -10,7 +12,7 @@ class Agent implements Comparable<Agent> {
 		this.id = ii ;
 	}
 
-	@Override
+//	@Override
 	public int compareTo(Agent other) {
 		if ( this.id < other.getId() ) {
 			return -1 ;

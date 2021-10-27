@@ -1,25 +1,25 @@
 package hi_inheritance_et_al.aa_inheritance;
 
-class Person {
+class Person{
 
+	private String lastName;
 	private double age ;
-	
-	public double getAge() { 
-		return age ; 
-	}
-	
-	public Person( double age ){
+
+	Person( double age ){
 		this.age = age ;
 	}
-	
-	public Person() {
-		System.out.println("error: constructor introduced to make " +
-				"code compile") ;
-		System.exit(-1) ;
+
+	double getAge() {
+		return age ; 
 	}
-	
-	public void annualUpdate() {
+
+	void annualUpdate() {
 		this.age++ ;
+	}
+
+	@Override
+	public String toString() {
+		return "lastName=" + this.lastName + "; age=" + this.age ;
 	}
 
 }

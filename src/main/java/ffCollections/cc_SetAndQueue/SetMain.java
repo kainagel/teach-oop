@@ -8,7 +8,7 @@ class SetMain {
 
 		//    	Set<Agent> agents = new ArrayList<>() ;
 //		Set<Agent> agents = new HashSet<>() ;
-		    	Set<Agent> agents = new TreeSet<>() ;
+		SortedSet<Agent> agents = new TreeSet<>() ;
 
 		for ( int ii=10 ; ii>=0; ii-- ) {
 			Agent ag = new Agent(ii) ;
@@ -16,6 +16,7 @@ class SetMain {
 		}
 
 		Agent ag2 = new Agent(11) ;
+
 		boolean flag = agents.add( ag2 ) ;
 		System.out.println( " flag1: " + flag ) ;
 

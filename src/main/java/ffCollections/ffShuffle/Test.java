@@ -13,7 +13,7 @@ class Test {
 
 	
 	public static void main ( String[] args ) {
-		List<Agent> agents = new ArrayList<>() ;
+		List<Agent> agents = new LinkedList<>() ;
 		
 		for ( int ii=0 ; ii<10 ; ii++ ) {
 			Agent ag = new Agent(ii) ;
@@ -23,7 +23,7 @@ class Test {
 		
 		Random rnd = new Random(4711) ;
 
-		Collections.shuffle(agents) ;
+		Collections.shuffle( agents );
 		printAllAgentIds(agents) ;
 
 		Collections.shuffle(agents ) ;

@@ -10,4 +10,13 @@ class Agent {
 		this.id = ii ;
 	}
 
+	@Override
+	public String toString() {
+		return "agent with id=" + id;
+	}
+
+	void doSomething() {
+		System.out.println( "doing something with agent with id=" + id ) ;
+	}
+
 }

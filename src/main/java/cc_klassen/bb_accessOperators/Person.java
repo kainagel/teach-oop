@@ -6,11 +6,15 @@ class Person {
 	private boolean havingDrivingLicense ;
 	
 	void incAge() {
-		setAge(getAge() + 1) ;
+		age++ ;
+	}
+
+	void addToAge( int val ) {
+		age += val ;
 	}
 	
 	void printAllInformation() {
-		System.out.println( " age: " + getAge() + " lastName: " 
+		System.out.println( " age: " + getAge() + " lastName: "
 				+ getLastName() + " drivLic: " + isHavingDrivingLicense() ) ;
 	}
 

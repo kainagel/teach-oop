@@ -8,7 +8,10 @@ class Agent {
 	public Agent ( int age ) {
 		this.age = age ;
 	}
-	
+	public void doSomething(){
+		System.out.println("agent with age=" + age + " is doing something.");
+	}
+
 //	@Override
 //	public String toString() {
 //		return "[age: " + this.age + "]" ;

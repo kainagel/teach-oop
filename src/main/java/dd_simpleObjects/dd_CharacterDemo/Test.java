@@ -8,16 +8,21 @@ public class Test {
 //    	System.out.println( " num val of A: " + Character.getNumericValue('A') ) ;
 //    	System.out.println( " num val of b: " + Character.getNumericValue('b') ) ;
     	
-    	
-        Character myCharacter = new Character('b');
-        Character a2 = new Character('b');
-        
-        if ( myCharacter.equals(a2) ) {
+
+        Character aCharacter = 'a';
+        Character bCharacter = 'h';
+
+        System.out.println( aCharacter.compareTo( bCharacter ) ) ;
+
+//        Character myCharacter = new Character('b');
+//        Character a2 = new Character('b');
+//
+//        if ( myCharacter.equals(a2) ) {
 //        if ( myCharacter == a2 ) {
-            System.out.println ( " equal " ) ;
-        } else {
-            System.out.println ( " NOT equal " ) ;
-        }
+//            System.out.println ( " equal " ) ;
+//        } else {
+//            System.out.println ( " NOT equal " ) ;
+//        }
 
 //        char bbb = 'g' ;
 //        

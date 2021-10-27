@@ -6,9 +6,10 @@ import java.util.List;
 class Main {
 
 	public static void main(String[] args) {
+
 //		AgentI aa = new Adult(1);
 //		AgentI dd = new Dog(2);
-//		
+//
 //		aa.move(); // Adult move method
 //		dd.move(); // Dog move method
 		
@@ -31,14 +32,14 @@ class Main {
 			Dog dg = new Dog(i);
 			agents.add(dg);
 		}
-		
+
 		for (AgentI ag : agents){ // Schleife über den Inhalt von agents
 			ag.move(); // polymorphic!
 
-			if (ag instanceof CanBark){
-				((CanBark)ag).bark();
+			if ( ag instanceof CanBark ){
+				CanBark dog = (CanBark) ag;
+				dog.bark();
 			}
-			
 		}
 	}
 	

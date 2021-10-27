@@ -3,12 +3,30 @@ class Child extends Person {
 	
 	private String school ;
 
-	public void setSchool( String school ) {
-		this.school = school ;
+
+	Child( double age, String school ) {
+		super( age );
+		this.school = school;
 	}
-	public String getSchool() { 
+
+
+	String getSchool() {
 		return this.school ; 
 	}
+
+	@Override
+	void annualUpdate() {
+		super.annualUpdate();
+		if ( getAge() > 12 ) {
+			this.school = "ABC-Gymnasium";
+		}
+	}
+
+	@Override
+	public String toString() {
+		return super.toString() + "; school=" + school;
+	}
+
 	
 }
 

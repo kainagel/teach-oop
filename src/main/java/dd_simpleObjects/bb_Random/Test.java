@@ -4,8 +4,9 @@ import java.util.Random ;
 class Test {
 	public static void main  ( String[] args ) {
 		
-		System.out.println( Math.random() ) ;
-		
+
+		Math.random() ;
+
 		Random rnd1 = new Random( 1236 ) ;
 		Random rnd2 = new Random( 1236 ) ;
 		
@@ -15,12 +16,10 @@ class Test {
 		
 //		rnd1.nextDouble() ;
 		
-		for ( int ii=0 ; ii<5 ; ii++ ) {
+		for ( int ii=0 ; ii<500 ; ii++ ) {
 			System.out.println ( " rnd1: " + rnd1.nextDouble() +
 					"; rnd2: " + rnd2.nextDouble() + "; rnd2b: " + rnd2.nextDouble() ) ;
 		}
 
-	
-	
 	}
 }

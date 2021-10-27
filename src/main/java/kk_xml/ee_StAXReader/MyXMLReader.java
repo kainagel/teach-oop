@@ -40,10 +40,10 @@ public class MyXMLReader {
 //				System.out.println( " eventType: " + eventTypeAsInt ) ;
 //				printEventType(eventTypeAsInt) ;
 //			}
-				
+
 			while ( in.hasNext() ) {
 				in.next() ; // advance one step; we don't need the result
-
+//
 				if ( in.isStartElement() ) {
 					printAndIncrementIndent() ;
 					String elementName = in.getLocalName();
@@ -53,7 +53,7 @@ public class MyXMLReader {
 						String value = in.getAttributeValue(ii) ;
 						System.out.print( key + "=" + value + " " ) ;
 					}
-					//text aus dem element rausholen ist einfacher als via isCharacters()
+//					// text aus dem element rausholen ist einfacher als via isCharacters()
 					if ("route".equalsIgnoreCase(in.getLocalName())) {
 						System.out.print(in.getElementText());
 						indent-- ; // (swallows route end element)
@@ -62,8 +62,8 @@ public class MyXMLReader {
 				} else if ( in.isEndElement() ) {
 					decrementAndPrintIndent() ;
 					System.out.println( "end of: " + in.getLocalName() ) ;
-//				} else if ( in.isCharacters() ) {
-//										System.out.print( in.getText() ) ;
+				} else if ( in.isCharacters() ) {
+					System.out.print( in.getText() ) ;
 //					// text is a bit messy to parse; I would avoid it as long as the document is not
 //					// a true text document.
 				}

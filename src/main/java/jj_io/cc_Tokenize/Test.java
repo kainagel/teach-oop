@@ -8,7 +8,7 @@ class Test
 	public static void main ( String[] args ) 
 	{
 		try {
-			File inputFile = new File ( "./src/jj_io/cc_Tokenize/farrago.txt" ) ;
+			File inputFile = new File ( "./src/main/java/jj_io/cc_Tokenize/farrago.txt" ) ;
 
 			FileReader inp = new FileReader ( inputFile ) ;
 
@@ -16,9 +16,10 @@ class Test
 			
 			String line = null ;
 			while ( (line=in.readLine()) != null ) {
-				String[] array = line.split(" +|\n|\t+") ;
-				for ( int ii=0 ; ii<array.length ; ii++ ) {
-					System.out.println( array[ii] ) ;
+				List<String> list = Arrays.asList( line.split(" +|\n|\t+" ) );
+//				List<String> list = Arrays.asList( line.split(" " ) );
+				for( String string : list ){
+					System.out.println( string );
 				}
 			}
 

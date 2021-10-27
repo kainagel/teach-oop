@@ -6,22 +6,53 @@ import java.util.Map.Entry;
 class Test {
 	public static void main(String[] args) {
 
-		Map<Long,Agent> agents = new HashMap<>() ;
+		List<Agent> agentList = new ArrayList<>();
 
+		Map<String,Agent> agents = new HashMap<>() ;
 		{
 			Agent ag1 = new Agent(10) ;
 			Agent ag2 = new Agent(20) ;
 			Agent ag3 = new Agent(30) ;
-			
-			agents.put( new Long(20), ag1 ) ;
-			agents.put( new Long(21), ag2 ) ;
-			agents.put( new Long(200), ag3 ) ;
-			agents.put( new Long(2001), ag1 ) ;
+
+			agentList.add( ag1);
+			agentList.add( ag2);
+			agentList.add( ag3);
+
+			agents.put( "Meier", ag1 ) ;
+			agents.put( "Mueller", ag2 ) ;
+			agents.put( "Schmidtz", ag3 ) ;
+			agents.put( "Meier", ag3 ) ;
 		}
+
+//		for( Agent agent : agentList ){
+//			agent.doSomething() ;
+//		}
+//
+//		for( Agent agent : agents.values() ){
+//			agent.doSomething();
+//		}
+
+//		for( String string : agents.keySet() ){
+//			agents.get( string ).doSomething();
+//		}
+
+//		for( Entry<String, Agent> entry : agents.entrySet() ){
+//			Agent value = entry.getValue();
+//			String key = entry.getKey();
+//		}
+
+		for( Entry<String, Agent> entry : agents.entrySet() ){
+			Agent agent = entry.getValue();
+			String key = entry.getKey();
+		}
+
+
+
+
 		
-		for ( Long key : agents.keySet() ) {
-			System.out.println( "key=" + key + "; age=" + agents.get(key).getAge() ) ;
-		}
+//		for ( String key : agents.keySet() ) {
+//			System.out.println( "key=" + key + "; age=" + agents.get(key).getAge() ) ;
+//		}
 //		for ( Entry<String,Agent> entry : agents.entrySet() ) {
 //			System.out.println( "key=" + entry.getKey() + "; age=" + entry.getValue().getAge() ) ;
 //		}

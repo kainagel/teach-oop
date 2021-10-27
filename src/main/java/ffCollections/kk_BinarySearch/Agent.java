@@ -1,5 +1,6 @@
 package ffCollections.kk_BinarySearch;
-class Agent implements Comparable<Agent>
+class Agent
+		implements Comparable<Agent>
 {
 
 	private Integer id_ ;

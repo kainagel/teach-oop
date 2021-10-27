@@ -3,32 +3,39 @@ import java.io.* ;
 
 class Test {
 
-	private static void writeFile( String filename, String text )
-	{
 
-		try {
+	public static void main( String[] args )
+	{
+		String text = "This is our text." + System.lineSeparator() + "We like it very much." ;
+
+		writeFile( "abc/outfile.txt", text ) ;
+
+		for ( int ii=0 ; ii<10000 ; ii++ ){
+			System.out.println( "done" );
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+	private static void writeFile( String filename, String text ) {
+		try{
 			FileWriter fw;
 			fw = new FileWriter ( new File ( filename ) );
 			fw.write( text ) ;
 			fw.close();
-		} catch (IOException e) {
-//				e.printStackTrace(); 
-			throw new RuntimeException(e ) ;
+		} catch( IOException e ){
+			e.printStackTrace();
+		} finally {
+			System.out.println("entering finally clause");
 		}
-
-	}
-
-	public static void main( String[] args )
-	{
-//		try {
-			String text = "This is our text." + System.lineSeparator() + "We like it very much." ;
-			writeFile( "abc/outfile.txt", text ) ;
-
-			System.out.println( "done");
-//		} catch ( Exception ee ) {
-//			System.err.println( "Dear Customer, your code has produced an error.  Please call customer support and name "
-//							    + "the following error message:" + ee.getMessage() );
-//		}
 	}
 
 }

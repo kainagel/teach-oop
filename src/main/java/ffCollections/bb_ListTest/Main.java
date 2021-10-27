@@ -5,19 +5,76 @@ import java.util.*;
 
 class Main {
 	public static void main(String[] args) {
+		{
+//			Agent[] agents = new Agent[30];
+//			for( int ii = 0 ; ii < agents.length ; ii++ ){
+//				agents[ii] = new Agent( ii );
+//			}
+////			agents[30] = new Agent(30);
+//			for ( int ii=0 ; ii < agents.length ; ii++ ) {
+//				System.out.println( agents[ii]) ;
+//			}
+//
+//			agents[5] = new Agent(-333);
 
-		List<Agent> agents = new LinkedList() ;
+		}
+		{
+//			Random rnd = new Random(4711);
 
-		for ( int ii=1 ; ii<=5; ii++ ) {
-			Agent ag = new Agent(ii) ;
-			agents.add( ag ) ;
+
+			List<Agent> agents = new ArrayList<>();
+			for ( int ii=0 ; ii < 10 ; ii++ ) {
+				agents.add( new Agent( ii) ) ;
+			}
+
+//			for ( Iterator<Agent> it = agents.iterator() ; it.hasNext() ;  ){
+//				Agent agent = it.next();
+//				if ( agent.getId() < 3 ) {
+//					it.remove();
+//				}
+//			}
+
+			List<Agent> toRemove = new ArrayList<>();
+			for( Agent agent : agents ){
+				if ( agent.getId() < 3 ) {
+					toRemove.add( agent ) ;
+				}
+			}
+			agents.removeAll( toRemove ) ;
+
+
+
+			for( Agent agent : agents ){
+				System.out.println( agent ) ;
+			}
+
+
+//			System.out.println( "size=" + agents.size() );
+//			agents.add( new Agent(-324) ) ;
+//			agents.add( new Agent(-26) ) ;
+//			System.out.println( "size=" + agents.size() );
+//
+//			agents.set( 2, new Agent(-333) );
+//
+//			for( int ii = 0 ; ii < agents.size() ; ii++ ){
+//				System.out.println( agents.get(ii) );
+//			}
+
+
 		}
-		
-//		agents.add("bc") ;
-		
-		for ( Object agent : agents ) {
-			System.out.println( ((Agent)agent).getId() );
-		}
+
+//		List<Agent> agents = new ArrayList() ;
+//
+//		for ( int ii=1 ; ii<=5; ii++ ) {
+//			Agent ag = new Agent(ii) ;
+//			agents.add( ag ) ;
+//		}
+//
+////		agents.add("bc") ;
+//
+//		for ( Object agent : agents ) {
+//			System.out.println( ((Agent)agent).getId() );
+//		}
 		
 //		for ( Agent agent : agents ) {
 //			System.out.println(  agent.getId() ) ;
