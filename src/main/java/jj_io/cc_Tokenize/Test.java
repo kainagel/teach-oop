@@ -8,19 +8,23 @@ class Test
 	public static void main ( String[] args ) 
 	{
 		try {
-			File inputFile = new File ( "./src/main/java/jj_io/cc_Tokenize/farrago.txt" ) ;
+			File inputFile = new File ( "./src/main/java/jj_io/cc_Tokenize/berlinWeather.csv" ) ;
 
 			FileReader inp = new FileReader ( inputFile ) ;
 
 			BufferedReader in = new BufferedReader( inp ) ;
 			
-			String line = null ;
+			String line;
 			while ( (line=in.readLine()) != null ) {
-				List<String> list = Arrays.asList( line.split(" +|\n|\t+" ) );
-//				List<String> list = Arrays.asList( line.split(" " ) );
-				for( String string : list ){
-					System.out.println( string );
+				final String[] array = line.split( " +" );
+				List<String> list = Arrays.asList( array );
+
+//				List<String> list = Arrays.asList( line.split(" +" ) );
+
+				for( String entry : list ){
+					System.out.println( entry );
 				}
+
 			}
 
 		} catch ( Exception e ) {
