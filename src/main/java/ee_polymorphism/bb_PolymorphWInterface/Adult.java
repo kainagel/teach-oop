@@ -1,6 +1,6 @@
 package ee_polymorphism.bb_PolymorphWInterface;
 
-class Adult implements AgentI, CanSpeak{
+class Adult implements AgentI{
 
 	private int id;
 	
@@ -22,7 +22,7 @@ class Adult implements AgentI, CanSpeak{
 		System.out.println("Adult speak method; id: " + id);
 	}
 
-	@Override public void speak( String msg ){
-		throw new RuntimeException( "not implemented" );
-	}
+//	@Override public void speak( String msg ){
+//		throw new RuntimeException( "not implemented" );
+//	}
 }
