@@ -19,7 +19,7 @@ public class ServletExample extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-		System.out.println("Request incoming");
+		System.out.println("Request incoming on " + req.getPathInfo());
 		Enumeration<String> it = req.getHeaderNames();
 		while (it.hasMoreElements()) {
 			String header = it.nextElement();
@@ -28,7 +28,7 @@ public class ServletExample extends HttpServlet {
 
 
 		PrintWriter out = resp.getWriter();
-		out.write("Hallo");
+		out.write("Hallo von " + req.getPathInfo());
 
 	}
 
