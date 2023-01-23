@@ -26,6 +26,7 @@ public class ServletExample extends HttpServlet {
 			System.out.println("Header:" + header + "  " + req.getHeader(header));
 		}
 
+		System.out.println(req.getParameterMap());
 
 		PrintWriter out = resp.getWriter();
 		out.write("Hallo von " + req.getPathInfo());
