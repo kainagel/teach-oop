@@ -9,8 +9,8 @@ class Main{
 
 	public static void main( String[] args ){
 
-//		Queue<String> queue = new PriorityQueue<>()  ;
-		Queue<String> queue = new LinkedList<String>();
+		Queue<String> queue = new PriorityQueue<>()  ;
+//		Queue<String> queue = new LinkedList<String>();
 
 		queue.add( "Pedelec" ) ;
 		queue.add( "Fahrrad" ) ;
@@ -28,7 +28,7 @@ class Main{
 
 		System.out.println( queue.peek() );
 
-		String removed = queue.poll();
+		String removed = queue.remove();
 
 		System.out.println( "removed=" + removed );
 

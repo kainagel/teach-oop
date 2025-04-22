@@ -1,10 +1,10 @@
 package nn_junit;
 
 public class Utils{
+	private static double result = Double.NEGATIVE_INFINITY;
 
 
 	static double myMax( double aa, double bb, double cc ) {
-		double result = Double.NEGATIVE_INFINITY;
 
 		if ( aa > result ) {
 			result = aa ;

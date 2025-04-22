@@ -5,17 +5,17 @@ class StringBuilderMain {
 	{
 		System.out.println( " start " ) ;
 
-		String str = "" ;
-		for ( int ii=1 ; ii<100000; ii++ ) {
-			str += "ab\n" ;
+		StringBuilder str = new StringBuilder();
+		for ( int ii=1 ; ii<1000000; ii++ ) {
+			str.append( "ab\n" );
 		}
 		System.out.println ( " str  : " + str ) ;
 
-		StringBuilder strb = new StringBuilder() ;
-		for ( int ii=1 ; ii<100000 ; ii++ ) {
-			strb.append ( "ab\n" ) ;
-		}
-		System.out.println ( " strb: " + strb ) ;
+//		StringBuilder strb = new StringBuilder() ;
+//		for ( int ii=1 ; ii<1000000 ; ii++ ) {
+//			strb.append ( "ab\n").append( "cd" ) ;
+//		}
+//		System.out.println ( " strb: " + strb ) ;
 
 	}
 

@@ -5,13 +5,13 @@
 <!ELEMENT person ( plan* ) >
 <!ATTLIST person
           id CDATA #REQUIRED
-          gender ( male | female | unknown ) "unknown"
+          gender ( male | female | unknown | divers) "unknown"
 >            
 
 <!ELEMENT plan (act,(leg,act)*)>
 
 
-<!ELEMENT act EMPTY>
+<!ELEMENT act >
 <!ATTLIST act
           type CDATA ""
           x100 CDATA ""

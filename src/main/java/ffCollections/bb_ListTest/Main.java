@@ -5,27 +5,41 @@ import java.util.*;
 
 class Main {
 	public static void main(String[] args) {
+
 		{
-//			Agent[] agents = new Agent[30];
-//			for( int ii = 0 ; ii < agents.length ; ii++ ){
+//			Agent[] agents;
+//
+//			agents = new Agent[10];
+//
+//			for( int ii = 0 ; ii < 10 ; ii++ ){
 //				agents[ii] = new Agent( ii );
 //			}
-////			agents[30] = new Agent(30);
 //			for ( int ii=0 ; ii < agents.length ; ii++ ) {
 //				System.out.println( agents[ii]) ;
 //			}
-//
-//			agents[5] = new Agent(-333);
-
 		}
 		{
-//			Random rnd = new Random(4711);
-
-
 			List<Agent> agents = new ArrayList<>();
-			for ( int ii=0 ; ii < 10 ; ii++ ) {
+
+//			agents.add( Double.valueOf( 22 ) );
+
+			for ( int ii=0 ; ii < 12 ; ii++ ) {
 				agents.add( new Agent( ii) ) ;
 			}
+
+//			Agent testAgent = agents.get( 5 );
+//			agents.remove( testAgent );
+
+			Integer index = Integer.valueOf( 4 );
+			int index2 = index;
+
+			agents.remove( index );
+
+			for( Agent agent : agents ){
+				agent.doSomething();
+			}
+
+			System.exit(-1);
 
 //			for ( Iterator<Agent> it = agents.iterator() ; it.hasNext() ;  ){
 //				Agent agent = it.next();
@@ -34,19 +48,11 @@ class Main {
 //				}
 //			}
 
-			List<Agent> toRemove = new ArrayList<>();
-			for( Agent agent : agents ){
-				if ( agent.getId() < 3 ) {
-					toRemove.add( agent ) ;
-				}
-			}
-			agents.removeAll( toRemove ) ;
 
 
-
-			for( Agent agent : agents ){
-				System.out.println( agent ) ;
-			}
+//			for( Agent agent : agents ){
+//				System.out.println( agent ) ;
+//			}
 
 
 //			System.out.println( "size=" + agents.size() );

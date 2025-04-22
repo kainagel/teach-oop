@@ -16,10 +16,7 @@ class Test
 			
 			String line;
 			while ( (line=in.readLine()) != null ) {
-				final String[] array = line.split( " +" );
-				List<String> list = Arrays.asList( array );
-
-//				List<String> list = Arrays.asList( line.split(" +" ) );
+				List<String> list = Arrays.asList( line.split(" *" ) );
 
 				for( String entry : list ){
 					System.out.println( entry );

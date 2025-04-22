@@ -1,4 +1,4 @@
-# Source: Meteostat (https://meteostat.net/).
+# Source:          Meteostat (https://meteostat.net/).
 # Raw data provided by NOAA (https://www.noaa.gov/), DWD (https://www.dwd.de/) and others (https://dev.meteostat.net/docs/sources.html).
 date,tavg,tmin,tmax,prcp,snow,wdir,wspd,wpgt,pres,tsun
 2020-02-01,10.9,7.1,12.6,6.7,0,234.2,22.3,50.8,1002.0,0

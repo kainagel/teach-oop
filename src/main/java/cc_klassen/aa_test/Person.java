@@ -1,42 +1,33 @@
 package cc_klassen.aa_test;
 
-class Person {
+class Person{
 
-	private int age ;
-	private String lastName ;
-	private double height ;
+	private int yearOfBirth ;
 
+//	Person() {
+//
+//	}
 
-
-
-
-
-
-
-
-
-
-
-	void printYourself() {
-		System.out.println(  "lastName=" + lastName + "; age=" + age + "; height=" + height );
+	Person( int yearOfBirth ) {
+		this.yearOfBirth = yearOfBirth;
 	}
 
-	int getAge(){
-		return age;
+//	void setAge( int val ) {
+//		this.age = val;
+//	}
+
+	int getAge() {
+		return 2024 - yearOfBirth;
 	}
-	void setAge( int age ){
-		this.age = age;
+
+//	void print( String additionalInfo ) {
+//		System.out.println( "calling the PERSON print method");
+//		System.out.println( "additionalInfo=" + additionalInfo );
+//	}
+
+	void print() {
+		System.out.println( "calling the PERSON print method");
 	}
-	String getLastName(){
-		return lastName;
-	}
-	void setLastName( String lastName ){
-		this.lastName = lastName;
-	}
-	double getHeight(){
-		return height;
-	}
-	void setHeight( double height ){
-		this.height = height;
-	}
+
+
 }

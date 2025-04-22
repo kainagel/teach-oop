@@ -10,11 +10,11 @@ class Main {
 //		List<AgentI> agents = new LinkedList<>() ;
 
 		for ( int ii=1 ; ii<=5; ii++ ) {
-			AgentI ag = new Person(ii) ;
+			AgentI ag = new PersonImpl(ii) ;
 			agents.add ( ag ) ;
 		}
 		for ( int ii=1 ; ii<=5; ii++ ) {
-			Dog ag = new Dog(ii) ;
+			DogImpl ag = new DogImpl(ii) ;
 			agents.add ( ag ) ;
 		}
 		

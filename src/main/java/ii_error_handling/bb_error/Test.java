@@ -4,38 +4,32 @@ import java.io.* ;
 class Test {
 
 
-	public static void main( String[] args )
-	{
-		String text = "This is our text." + System.lineSeparator() + "We like it very much." ;
-
-		writeFile( "abc/outfile.txt", text ) ;
-
-		for ( int ii=0 ; ii<10000 ; ii++ ){
-			System.out.println( "done" );
-		}
+	public static void main( String[] args ) {
+		extracted();
 	}
 
+	private static void extracted() {
+		String text = "This is our text." + System.lineSeparator() + "We like it very much." ;
 
 
-
-
-
-
-
-
-
-
-	private static void writeFile( String filename, String text ) {
+		FileWriter fileWriter = null;
 		try{
-			FileWriter fw;
-			fw = new FileWriter ( new File ( filename ) );
-			fw.write( text ) ;
-			fw.close();
+			fileWriter = new FileWriter( "abc/myoutputfile.txt" );
+			fileWriter.write( text );
+			fileWriter.close();
 		} catch( IOException e ){
-			e.printStackTrace();
-		} finally {
-			System.out.println("entering finally clause");
+			throw new RuntimeException( e );
 		}
+
+		for ( int ii=0 ; ii<1000; ii++ ){
+//			System.out.println( "... lots of output ..." );
+		}
+
+
+	}
+
+	void tyrOut() {
+		throw new RuntimeException( "my exception" );
 	}
 
 }

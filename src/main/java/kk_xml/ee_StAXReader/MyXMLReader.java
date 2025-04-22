@@ -13,6 +13,9 @@ import javax.xml.validation.Validator;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class MyXMLReader {
 
@@ -23,31 +26,34 @@ public class MyXMLReader {
 		File file = new File("src/main/java/kk_xml/ee_StAXReader/plans.xml");
 
 		try ( FileInputStream stream = new FileInputStream(file) ; ) {
+
+
+
+
+
 			XMLInputFactory factory = XMLInputFactory.newInstance() ;
 
 //			factory.setProperty(XMLInputFactory.IS_VALIDATING, true); // does not work with java standard XMLInputFactory.
 			// the java default implementation of this does not allow validation.  The woodstox implementation does but needs a dependency ...
 			// thus see teach-oop-with maven.
-			// In theory, it should be possible to do validation separately from parsing even with the java standard package.  But it seems that
-			// this only works for xsd but not for dtd.
-			// :-(
 
 			XMLStreamReader in = factory.createXMLStreamReader( stream );
 
-			// stream of events:
+//			// stream of events:
 //			while (in.hasNext()) {
-//				int eventTypeAsInt = in.next();
-//				System.out.println( " eventType: " + eventTypeAsInt ) ;
-//				printEventType(eventTypeAsInt) ;
+//				int result = in.next();
+////				System.out.println( " eventType: " + result ) ;
+//				printEventType(result) ;
 //			}
 
 			while ( in.hasNext() ) {
 				in.next() ; // advance one step; we don't need the result
-//
+
 				if ( in.isStartElement() ) {
 					printAndIncrementIndent() ;
 					String elementName = in.getLocalName();
 					System.out.print( elementName + ": ") ;
+
 					for ( int ii=0 ; ii<in.getAttributeCount() ; ii++ ) {
 						String key = in.getAttributeLocalName(ii) ;
 						String value = in.getAttributeValue(ii) ;
@@ -62,10 +68,10 @@ public class MyXMLReader {
 				} else if ( in.isEndElement() ) {
 					decrementAndPrintIndent() ;
 					System.out.println( "end of: " + in.getLocalName() ) ;
-				} else if ( in.isCharacters() ) {
-					System.out.print( in.getText() ) ;
-//					// text is a bit messy to parse; I would avoid it as long as the document is not
-//					// a true text document.
+//				} else if ( in.isCharacters() ) {
+//					System.out.print( in.getText() ) ;
+////					// text is a bit messy to parse; I would avoid it as long as the document is not
+////					// a true text document.
 				}
 			}
 

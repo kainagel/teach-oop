@@ -16,15 +16,9 @@ class BinarySearchMain
 			ag.setAge( Math.random() ) ;
 		}
 
-		for( Iterator<Agent> it = agents.iterator(); it.hasNext() ; ) {
-			Agent agent = it.next();
-			it.remove();
-		}
-
 		System.out.println( "\n print out agents in their original sequence:" ) ;
-		for ( int ii=0 ; ii<agents.size() ; ii++ ) {
-			Agent ag = agents.get(ii) ;
-			System.out.println ( " id: " + ag.getId() + " age: " + ag.getAge() ) ;
+		for( Agent ag : agents ){
+			System.out.println( " id: " + ag.getId() + " age: " + ag.getAge() );
 		}
 
 		System.out.println( "\n try to get existing agent with id via binary search" ) ;

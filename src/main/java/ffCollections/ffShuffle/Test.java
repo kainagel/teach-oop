@@ -23,10 +23,10 @@ class Test {
 		
 		Random rnd = new Random(4711) ;
 
-		Collections.shuffle( agents );
+		Collections.shuffle( agents, rnd );
 		printAllAgentIds(agents) ;
 
-		Collections.shuffle(agents ) ;
+		Collections.sort( agents );
 		printAllAgentIds(agents) ;
 
 	}

@@ -6,23 +6,30 @@ import java.util.Map.Entry;
 class Test {
 	public static void main(String[] args) {
 
-		List<Agent> agentList = new ArrayList<>();
+		Agent ag0 = new Agent(10) ;
+		Agent ag1 = new Agent(20) ;
+		Agent ag2 = new Agent(30) ;
+		Agent ag3 = new Agent(40) ;
 
-		Map<String,Agent> agents = new HashMap<>() ;
-		{
-			Agent ag1 = new Agent(10) ;
-			Agent ag2 = new Agent(20) ;
-			Agent ag3 = new Agent(30) ;
+//		List<Agent> agentList = new ArrayList<>();
+//		agentList.add( ag0);
+//		agentList.add( ag1);
+//		agentList.add( ag2);
 
-			agentList.add( ag1);
-			agentList.add( ag2);
-			agentList.add( ag3);
 
-			agents.put( "Meier", ag1 ) ;
-			agents.put( "Mueller", ag2 ) ;
-			agents.put( "Schmidtz", ag3 ) ;
-			agents.put( "Meier", ag3 ) ;
+		Map<String,Agent> agents = new LinkedHashMap<>() ;
+
+		agents.put( "Meier", ag0 ) ;
+		agents.put( "Mueller", ag1 ) ;
+		agents.put( "Schmidtz", ag2 ) ;
+		agents.put( "Meier", ag3 ) ;
+
+		for( Agent agent : agents.values() ){
+			agent.doSomething();
 		}
+
+		System.exit( -1 );
+
 
 //		for( Agent agent : agentList ){
 //			agent.doSomething() ;

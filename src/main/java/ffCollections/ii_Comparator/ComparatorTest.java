@@ -12,11 +12,20 @@ class ComparatorTest
 		System.out.println ( "\ndemonstrate that id/age are in rnd sequence: " ) ;
 		printAllAgents(agents);
 
+		System.out.println ( "\nsort in natural order: " ) ;
+		Collections.sort( agents );
+		printAllAgents(agents);
+
 		System.out.println ( "\nsort the agents according to comparator ..." ) ;
 
-		Comparator<Agent> cmp = new MyComparator();
-		Collections.sort( agents, cmp );
 
+		Comparator<Agent> cmp = new MyNewComparator();
+		Collections.sort( agents, cmp );
+//		Collections.sort( agents, Comparator.comparingDouble( Agent::getAge ) );
+
+//		Comparator<Agent> cmp = new MyComparator();
+//		Collections.sort( agents, cmp );
+//
 		System.out.println ( "\nprint out the agents: " ) ;
 		printAllAgents(agents) ;
 

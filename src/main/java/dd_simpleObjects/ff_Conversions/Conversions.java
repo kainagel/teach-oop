@@ -2,6 +2,8 @@ package dd_simpleObjects.ff_Conversions;
 
 import java.util.*;
 
+import static java.lang.Math.*;
+
 public class Conversions {
 	
 	public static void main ( String[] args ) {
@@ -9,7 +11,17 @@ public class Conversions {
 		double aVariable = 23.;
 		int bVariable = 44;
 
-		Double cVariable = Double.valueOf( 23. );
+		Double eVariable = new Double(23.);
+		Double dVariabe = Double.valueOf( 23. );
+
+		double aa = sin( 23. );
+
+		Double bb = 23.;
+		Integer cc = Integer.valueOf( 23 );
+
+
+
+		Double cVariable = null;
 		Integer dVariable = new Integer( 44 );
 
 		double result = cVariable.doubleValue();
@@ -23,6 +35,16 @@ public class Conversions {
 		Double result2 = Double.valueOf( 3. );
 
 		Double result3 = Double.valueOf( str );
+
+		String abc = String.valueOf( eVariable );
+		String def = eVariable.toString();
+
+		String bll = Double.toString( 13. );
+
+//		String bll = String.valueOf( Double.valueOf( 13. ) );
+
+		double var = Double.parseDouble( "13." );
+
 
 //		Xyz.valueOf( someOtherRepresentation ) ;
 
