@@ -1,10 +1,9 @@
 package cc_klassen.zzConfigSandbox;
 
 class Config{
-	private ControlerConfig controlerConfig;
-	private NetworkConfig networkConfig;
-	private PlansConfig plansConfig;
-
+	private ControlerConfig controlerConfig = new ControlerConfig();
+	private NetworkConfig networkConfig = new NetworkConfig();
+	private PlansConfig plansConfig = new PlansConfig();
 
 	public ControlerConfig controller(){
 		return controlerConfig;

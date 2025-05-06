@@ -5,7 +5,7 @@ class NetworkConfig{
 	public String getFile(){
 		return file;
 	}
-	public void setFile( String file ){
+	public void setFileName( String file ){
 		this.file = file;
 	}
 }
