@@ -8,9 +8,9 @@ class Main{
 		Config config = new Config();
 
 		// modify the config:
-		config.getControlerConfig().setLastIteration(1);
+		config.controller().setLastIteration(1 );
 
-		config.getNetworkConfig().setFile( "scenario/equil/network.xml.gz");
+		config.network().setFile( "scenario/equil/network.xml.gz" );
 
 		// continue with scenario:
 		//...
