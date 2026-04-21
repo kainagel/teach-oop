@@ -9,6 +9,7 @@ class Main{
 		int aa = 15;
 		int bb = 30;
 
+
 		double vv = myMaxForLong( aa, bb );
 
 
