@@ -2,22 +2,20 @@ package bb_methods_classes_intro.ee_StaticVariable;
 
 public class Main {
 
-	static int addOne(int cnt) {
+	static int cnt = 0;
+
+	static void addOne() {
 		cnt += 1 ;
-		return cnt;
 	}
 
-	static int addTwo( int cnt) {
+	static void addTwo() {
 		cnt += 2 ;
-		return cnt;
 	}
 
 	public static void main ( String[] args ) {
-		int cnt = 0;
+		addOne();
+		addTwo();
 
-
-		cnt = addOne(cnt) ;
-		cnt = addTwo(cnt) ;
 		System.out.println("cnt=" + cnt ) ;
 	}
 }

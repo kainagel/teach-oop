@@ -1,15 +1,24 @@
 package bb_methods_classes_intro.zz_test;
 
-public class Utils {
+class Utils{
 
-	// another line
-	
-	static double doSomethingWith( double aa, double bb ) {
-		System.out.println( "using the double/double method");
-		return aa*bb ;
-		
+	static double myMax( double aa, double bb ){
+		double vv;
+		if ( aa > bb ) {
+			vv = aa;
+		} else {
+			vv = bb;
+		}
+		return vv;
 	}
-	
-	// putting in an empty comment
+	static long myMaxForLong( long aa, long bb ){
+		long vv;
+		if ( aa > bb ) {
+			vv = aa;
+		} else {
+			vv = bb;
+		}
+		return vv;
+	}
 
 }
